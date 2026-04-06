@@ -380,17 +380,12 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <section data-s="12" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-2">Étape 2 — Installer Claude Code</h3>
-    <p class="text-sol-gray text-sm mb-4">Une seule commande. Pas besoin d'installer autre chose avant.</p>
+    <p class="text-sol-gray text-sm mb-4">Une seule commande. Tu as besoin de Node.js (va sur nodejs.org si tu l'as pas).</p>
     <div class="grid sm:grid-cols-2 gap-4 mb-4">
         <div class="card-accent p-5 ch">
             <div class="text-2xl mb-2 emoji">🍎</div>
-            <div class="font-bold text-sm mb-3">Mac / Linux</div>
-            <div class="cmd text-xs">curl -fsSL https://claude.ai/install.sh | bash</div>
-        </div>
-        <div class="card-accent p-5 ch">
-            <div class="text-2xl mb-2 emoji">🪟</div>
-            <div class="font-bold text-sm mb-3">Windows</div>
-            <div class="cmd text-xs">irm https://claude.ai/install.ps1 | iex</div>
+            <div class="font-bold text-sm mb-3">Toutes plateformes (Mac, Windows, Linux)</div>
+            <div class="cmd">npm install -g @anthropic-ai/claude-code</div>
         </div>
     </div>
 </div>
@@ -402,10 +397,9 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
     <div class="terminal">
         <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div><span class="text-gray-500 text-xs ml-2 font-mono">Terminal</span></div>
         <div class="terminal-body">
-            <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">curl -fsSL https://claude.ai/install.sh | bash</span></p>
-            <p class="terminal-output mt-2">Downloading Claude Code...</p>
-            <p class="terminal-output">Installing to /usr/local/bin/claude...</p>
-            <p class="terminal-output">Setting up auto-updates...</p>
+            <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">npm install -g @anthropic-ai/claude-code</span></p>
+            <p class="terminal-output mt-2">added 3 packages in 5s</p>
+            <p class="terminal-output">2 packages are looking for funding</p>
             <p class="terminal-output mt-2">✓ <span style="color:#30D9DE">Claude Code installed successfully!</span></p>
         </div>
     </div>
@@ -464,7 +458,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
         <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — 4 étapes</div>
         <div class="text-gray-400">
             1. Ouvrir le terminal<br>
-            2. curl -fsSL https://claude.ai/install.sh | bash<br>
+            2. npm install -g @anthropic-ai/claude-code<br>
             3. Prendre l'abonnement Pro sur claude.ai<br>
             4. Taper "claude" et se connecter
         </div>
@@ -811,8 +805,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
         <div style="color:#4CC0C0" class="mb-3 font-bold">// Claude Code — Cheatsheet</div>
         <div class="text-gray-400 space-y-2">
             <p>INSTALLER</p>
-            <p>  Mac/Linux : curl -fsSL https://claude.ai/install.sh | bash</p>
-            <p>  Windows :   irm https://claude.ai/install.ps1 | iex</p>
+            <p>  npm install -g @anthropic-ai/claude-code</p>
             <p>  claude --version</p>
             <p>  claude</p>
             <p></p>
