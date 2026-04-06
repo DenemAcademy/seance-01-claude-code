@@ -548,8 +548,228 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </div>
 </section>
 
-<!-- ===== S12-13: L'interface ===== -->
+<!-- ===== NOUVELLES SECTIONS : Abonnements + connexion ===== -->
+
+<!-- Les abonnements — intro -->
 <section data-s="14" class="py-20">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <div class="flex items-center gap-3 mb-6">
+        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">2b</div>
+        <span class="font-mono text-xs text-sol-gray uppercase">Partie 2 bis</span>
+    </div>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Quel abonnement choisir ?</h2>
+    <p class="text-sol-gray text-lg leading-relaxed mb-4">Ok, on va parler argent 2 minutes. Parce que c'est la question que tout le monde se pose : "ça coûte combien ce truc ?"</p>
+    <p class="text-sol-gray leading-relaxed">Y'a deux façons d'utiliser Claude Code : avec un <strong>abonnement mensuel</strong> (le plus simple) ou avec une <strong>clé API</strong> (paiement à l'usage). On va voir les deux.</p>
+</div>
+</section>
+
+<!-- Les 3 plans -->
+<section data-s="15" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-6">Les abonnements Claude</h3>
+    <div class="space-y-4">
+        <div class="card-accent p-6 ch">
+            <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-lg">Pro</div>
+                <div class="font-space font-bold text-xl" style="color:#4CC0C0">20€/mois</div>
+            </div>
+            <p class="text-sol-gray text-sm leading-relaxed mb-3">C'est celui qu'on recommande pour commencer. Tu as accès à Claude Code dans le terminal, sur le web, et en app Desktop. Tu peux utiliser les modèles Sonnet et Opus. Le budget de tokens suffit largement pour des sessions de travail normales.</p>
+            <div class="card-light p-3 mt-2">
+                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Pour toi qui débute. C'est 20€/mois, c'est simple, et ça couvre 90% de tes besoins pendant la formation.</p>
+            </div>
+        </div>
+
+        <div class="card p-6 ch">
+            <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-lg">Max 5x</div>
+                <div class="font-space font-bold text-xl text-sol-gray">100€/mois</div>
+            </div>
+            <p class="text-sol-gray text-sm leading-relaxed mb-3">5 fois plus de tokens que le Pro. Pour ceux qui utilisent Claude Code intensément — genre tu bosses dessus toute la journée et tu atteins les limites du Pro régulièrement.</p>
+            <div class="card-light p-3 mt-2">
+                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Si après quelques semaines tu te retrouves bloqué par les limites du Pro, tu passes sur celui-là.</p>
+            </div>
+        </div>
+
+        <div class="card p-6 ch">
+            <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-lg">Max 20x</div>
+                <div class="font-space font-bold text-xl text-sol-gray">200€/mois</div>
+            </div>
+            <p class="text-sol-gray text-sm leading-relaxed mb-3">20 fois plus de tokens. Les limites deviennent quasi inexistantes. C'est pour les gros utilisateurs qui passent 8h/jour sur Claude Code.</p>
+            <div class="card-light p-3 mt-2">
+                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Quand tu seras à fond sur les projets clients et que tu livres plusieurs missions en même temps. Pas pour le début.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Mon conseil -->
+<section data-s="16" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <div class="card-green p-6">
+        <h4 class="font-bold text-lg mb-3">Mon conseil</h4>
+        <p class="text-sol-gray text-sm leading-relaxed mb-3">Commence avec le <strong>Pro à 20€/mois</strong>. C'est ce qu'il te faut pour la formation. Tu vas pas atteindre les limites au début.</p>
+        <p class="text-sol-gray text-sm leading-relaxed mb-3">Si au bout de 3-4 semaines tu te retrouves bloqué par les limites (ça arrive quand tu bosses vraiment intensément), tu passes sur le Max 5x. Pas avant.</p>
+        <p class="text-sol-gray text-sm leading-relaxed">Et tu peux changer de plan à tout moment. C'est pas un engagement — tu upgrades ou tu downgrades quand tu veux.</p>
+    </div>
+</div>
+</section>
+
+<!-- API vs Abonnement -->
+<section data-s="17" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Abonnement vs API — c'est quoi la différence ?</h3>
+    <p class="text-sol-gray text-sm mb-4">Tu vas entendre parler de "clé API" et d'"abonnement". Voilà la différence en simple :</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card-accent p-5 ch">
+            <div class="font-bold text-sm mb-2" style="color:#4CC0C0">Abonnement (Pro / Max)</div>
+            <div class="text-sol-gray text-xs space-y-2">
+                <p>→ Tu paies un prix fixe par mois</p>
+                <p>→ Tu te connectes avec ton compte Claude</p>
+                <p>→ T'as un budget de tokens inclus</p>
+                <p>→ C'est le plus simple</p>
+                <p>→ <strong>C'est ce qu'on utilise dans la formation</strong></p>
+            </div>
+        </div>
+        <div class="card p-5 ch">
+            <div class="font-bold text-sm mb-2 text-sol-gray">Clé API (paiement à l'usage)</div>
+            <div class="text-sol-gray text-xs space-y-2">
+                <p>→ Tu paies par token consommé</p>
+                <p>→ Tu utilises une clé API</p>
+                <p>→ Pas de limite fixe — tu paies ce que tu consommes</p>
+                <p>→ C'est pour l'automatisation et les projets avancés</p>
+                <p>→ On verra ça plus tard dans la formation</p>
+            </div>
+        </div>
+    </div>
+    <p class="text-sol-gray text-sm mt-4 italic">Pour l'instant, prends juste l'abonnement Pro. La clé API c'est pour plus tard quand tu construiras des chatbots et des automatisations pour tes clients.</p>
+</div>
+</section>
+
+<!-- Comment connecter Claude Code à ton abonnement -->
+<section data-s="18" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Connecter Claude Code à ton abonnement</h3>
+    <p class="text-sol-gray text-sm mb-4">Quand tu lances <span class="code-inline">claude</span> pour la première fois, il va te proposer de te connecter. C'est là que tu choisis ton mode :</p>
+    <div class="space-y-3">
+        <div class="flex items-start gap-4">
+            <div class="step border-sol-accent text-sol-accent">1</div>
+            <div><p class="text-sol-gray text-sm">Tu tapes <span class="code-inline">claude</span> dans le terminal</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+            <div class="step border-sol-accent text-sol-accent">2</div>
+            <div><p class="text-sol-gray text-sm">Il te demande comment tu veux te connecter — <strong>choisis "Claude account"</strong> (pas "API key")</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+            <div class="step border-sol-accent text-sol-accent">3</div>
+            <div><p class="text-sol-gray text-sm">Ton navigateur s'ouvre — connecte-toi avec le compte sur lequel t'as pris l'abonnement Pro</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+            <div class="step border-sol-accent text-sol-accent">4</div>
+            <div><p class="text-sol-gray text-sm">C'est fait. Claude Code utilise ton abonnement. Pas de surprise sur la facture.</p></div>
+        </div>
+    </div>
+
+    <div class="card-orange p-4 mt-4">
+        <div class="font-bold text-sm mb-2">Attention à ce piège</div>
+        <p class="text-sol-gray text-xs">Si tu as une variable <span class="code-inline">ANTHROPIC_API_KEY</span> sur ton système (de tests précédents par exemple), Claude Code va l'utiliser à la place de ton abonnement — et tu seras facturé en API au lieu d'utiliser ton forfait. Si t'es pas sûr, tape <span class="code-inline">claude logout</span> puis <span class="code-inline">claude login</span> et reconnecte-toi avec ton compte Claude.</p>
+    </div>
+</div>
+</section>
+
+<!-- Le prix réel -->
+<section data-s="19" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Concrètement, ça coûte combien au quotidien ?</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">Avec le Pro à 20€/mois, voilà ce que tu peux faire :</p>
+    <div class="space-y-2">
+        <div class="card-light p-4 ch">
+            <div class="flex items-center justify-between">
+                <span class="text-sol-gray text-sm">Créer un site web complet</span>
+                <span class="font-mono text-xs" style="color:#4CC0C0">~0.50€ de tokens</span>
+            </div>
+        </div>
+        <div class="card-light p-4 ch">
+            <div class="flex items-center justify-between">
+                <span class="text-sol-gray text-sm">Scraper 200 prospects</span>
+                <span class="font-mono text-xs" style="color:#4CC0C0">~0.30€ de tokens</span>
+            </div>
+        </div>
+        <div class="card-light p-4 ch">
+            <div class="flex items-center justify-between">
+                <span class="text-sol-gray text-sm">Générer 10 articles de blog</span>
+                <span class="font-mono text-xs" style="color:#4CC0C0">~0.80€ de tokens</span>
+            </div>
+        </div>
+        <div class="card-light p-4 ch">
+            <div class="flex items-center justify-between">
+                <span class="text-sol-gray text-sm">Corriger un bug dans un projet</span>
+                <span class="font-mono text-xs" style="color:#4CC0C0">~0.10€ de tokens</span>
+            </div>
+        </div>
+        <div class="card-light p-4 ch">
+            <div class="flex items-center justify-between">
+                <span class="text-sol-gray text-sm">Construire un chatbot complet</span>
+                <span class="font-mono text-xs" style="color:#4CC0C0">~1.50€ de tokens</span>
+            </div>
+        </div>
+    </div>
+    <p class="text-sol-gray text-sm mt-4">Avec 20€/mois t'as de la marge. Vraiment. Tu vas pas atteindre la limite en mode normal.</p>
+</div>
+</section>
+
+<!-- La commande /cost -->
+<section data-s="20" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Comment surveiller tes coûts</h3>
+    <p class="text-sol-gray text-sm mb-4">À n'importe quel moment dans Claude Code, tape :</p>
+    <div class="cmd">/cost</div>
+    <p class="text-sol-gray text-sm mt-4 mb-4">Tu vois exactement combien tu as consommé dans la conversation en cours. C'est transparent — pas de surprise.</p>
+    <div class="terminal">
+        <div class="terminal-bar">
+            <div class="terminal-dot" style="background:#ff5f57"></div>
+            <div class="terminal-dot" style="background:#febc2e"></div>
+            <div class="terminal-dot" style="background:#28c840"></div>
+        </div>
+        <div class="terminal-body">
+            <p><span class="terminal-prompt">></span> <span class="terminal-cmd">/cost</span></p>
+            <p class="terminal-output mt-2">Session cost: $0.42</p>
+            <p class="terminal-output">Input tokens: 12,847</p>
+            <p class="terminal-output">Output tokens: 3,291</p>
+        </div>
+    </div>
+    <p class="text-sol-gray text-xs mt-4 italic">0.42$ pour une session de travail. C'est rien. Tu pourrais travailler toute la journée et rester sous les 5€.</p>
+</div>
+</section>
+
+<!-- Petit récap prix -->
+<section data-s="21" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <div class="code border-sol-accent">
+        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — Les prix</div>
+        <div class="text-gray-400">
+            Pro → 20€/mois (c'est celui qu'on prend)<br>
+            Max 5x → 100€/mois (si tu atteins les limites)<br>
+            Max 20x → 200€/mois (quand tu seras à fond)<br>
+            <br>
+            Comment se connecter → "claude" puis "Claude account"<br>
+            Surveiller les coûts → /cost<br>
+            Changer de plan → claude.com/settings à tout moment
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Transition vers interface -->
+<section data-s="22" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <p class="text-sol-gray text-lg leading-relaxed text-center">Ok, maintenant que t'es installé, connecté et que tu sais combien ça coûte — on regarde comment ça marche concrètement.</p>
+</div>
+</section>
+
+<!-- ===== S12-13: L'interface ===== -->
+<section data-s="23" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">3</div>
@@ -583,7 +803,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </div>
 </section>
 
-<section data-s="15" class="py-12">
+<section data-s="24" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="terminal">
         <div class="terminal-bar">
@@ -606,7 +826,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </section>
 
 <!-- ===== S14: Mode interactif ===== -->
-<section data-s="16" class="py-12">
+<section data-s="25" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">C'est un dialogue</h3>
     <p class="text-sol-gray leading-relaxed mb-4">C'est pas un formulaire où tu remplis des champs. C'est une conversation. Tu parles, il fait, tu corriges, il ajuste. Comme avec un humain.</p>
@@ -637,7 +857,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </section>
 
 <!-- ===== S15: Les fichiers ===== -->
-<section data-s="17" class="py-12">
+<section data-s="26" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Les fichiers qu'il crée</h3>
     <p class="text-sol-gray leading-relaxed mb-4">Quand Claude Code crée des fichiers, ils apparaissent dans le dossier où tu es. Par exemple, si tu es dans <span class="code-inline">~/projets/mon-site</span>, les fichiers seront là.</p>
@@ -656,7 +876,7 @@ mon-site/<br>
 </section>
 
 <!-- ===== S16: Le contexte ===== -->
-<section data-s="18" class="py-12">
+<section data-s="27" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Il voit ce qui est autour de lui</h3>
     <p class="text-sol-gray leading-relaxed mb-4">Claude Code voit tous les fichiers du dossier où tu es. Si t'as déjà un projet avec du code, il le lit et il comprend. Tu peux lui dire :</p>
@@ -670,7 +890,7 @@ mon-site/<br>
 </section>
 
 <!-- ===== S17-18: Partie 4 — Comment lui parler ===== -->
-<section data-s="19" class="py-20">
+<section data-s="28" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">4</div>
@@ -681,7 +901,7 @@ mon-site/<br>
 </div>
 </section>
 
-<section data-s="20" class="py-12">
+<section data-s="29" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Règle n°1 — Sois précis</h3>
     <div class="grid sm:grid-cols-2 gap-4">
@@ -700,7 +920,7 @@ mon-site/<br>
 </section>
 
 <!-- ===== S19: Donner du contexte ===== -->
-<section data-s="21" class="py-12">
+<section data-s="30" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Règle n°2 — Donne du contexte</h3>
     <p class="text-sol-gray leading-relaxed mb-4">Dis-lui pour qui, pour quoi, quel style. Plus il en sait, mieux c'est.</p>
@@ -719,7 +939,7 @@ mon-site/<br>
 </section>
 
 <!-- ===== S20: Itérer ===== -->
-<section data-s="22" class="py-12">
+<section data-s="31" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Règle n°3 — Itère</h3>
     <p class="text-sol-gray leading-relaxed mb-4">Tu vas pas avoir le résultat parfait du premier coup. Et c'est normal. Le process c'est :</p>
@@ -735,7 +955,7 @@ mon-site/<br>
 </section>
 
 <!-- ===== S21: CLAUDE.md ===== -->
-<section data-s="23" class="py-12">
+<section data-s="32" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Le fichier CLAUDE.md</h3>
     <p class="text-sol-gray leading-relaxed mb-4">C'est un fichier texte que tu mets à la racine de ton projet. Claude Code le lit automatiquement à chaque fois. C'est son "briefing" — il sait qui tu es, ce que tu fais, comment tu veux qu'il travaille.</p>
@@ -761,7 +981,7 @@ vitrine pour mon activité.<br><br>
 </section>
 
 <!-- ===== S22: Créer un CLAUDE.md ===== -->
-<section data-s="24" class="py-12">
+<section data-s="33" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Comment le créer</h3>
     <p class="text-sol-gray text-sm mb-3">Tu peux même demander à Claude Code de le faire :</p>
@@ -773,7 +993,7 @@ vitrine pour mon activité.<br><br>
 </section>
 
 <!-- ===== S23-24: Partie 5 — Commandes ===== -->
-<section data-s="25" class="py-20">
+<section data-s="34" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">5</div>
@@ -784,7 +1004,7 @@ vitrine pour mon activité.<br><br>
 </div>
 </section>
 
-<section data-s="26" class="py-12">
+<section data-s="35" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Les slash commands</h3>
     <p class="text-sol-gray text-sm mb-4">Dans Claude Code, les commandes qui commencent par <span class="code-inline">/</span> sont des raccourcis :</p>
@@ -824,7 +1044,7 @@ vitrine pour mon activité.<br><br>
 </section>
 
 <!-- ===== S25: Commandes fichiers ===== -->
-<section data-s="27" class="py-12">
+<section data-s="36" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Gérer les fichiers</h3>
     <p class="text-sol-gray text-sm mb-4">Tu parles en français, Claude Code comprend :</p>
@@ -840,7 +1060,7 @@ vitrine pour mon activité.<br><br>
 </section>
 
 <!-- ===== S26: Exécuter des commandes ===== -->
-<section data-s="28" class="py-12">
+<section data-s="37" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Exécuter des commandes</h3>
     <p class="text-sol-gray text-sm mb-4">Claude Code peut aussi lancer des commandes système :</p>
@@ -854,7 +1074,7 @@ vitrine pour mon activité.<br><br>
 </section>
 
 <!-- ===== S27: Récap commandes ===== -->
-<section data-s="29" class="py-12">
+<section data-s="38" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="code border-sol-accent">
         <div class="text-sol-accent mb-2 font-bold">// Les commandes à retenir</div>
@@ -870,7 +1090,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S28-29: Partie 6 — Ce que tu peux construire ===== -->
-<section data-s="30" class="py-20">
+<section data-s="39" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">6</div>
@@ -882,7 +1102,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="31" class="py-12">
+<section data-s="40" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="grid sm:grid-cols-2 gap-4">
         <div class="card p-5 ch">
@@ -931,7 +1151,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S30-34: Partie 7 — Les limites ===== -->
-<section data-s="32" class="py-20">
+<section data-s="41" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">7</div>
@@ -942,7 +1162,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="33" class="py-8">
+<section data-s="42" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-orange p-6 ch">
         <h4 class="font-bold mb-2">Il peut se tromper</h4>
@@ -951,7 +1171,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="34" class="py-8">
+<section data-s="43" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-orange p-6 ch">
         <h4 class="font-bold mb-2">Il voit que ton dossier</h4>
@@ -960,7 +1180,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="35" class="py-8">
+<section data-s="44" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-orange p-6 ch">
         <h4 class="font-bold mb-2">Ça coûte des tokens</h4>
@@ -969,7 +1189,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="36" class="py-8">
+<section data-s="45" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-green p-6 ch">
         <h4 class="font-bold mb-2">L'astuce : découpe en petites étapes</h4>
@@ -979,7 +1199,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S35-40: Partie 8 — Les autres outils ===== -->
-<section data-s="37" class="py-20">
+<section data-s="46" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="flex items-center gap-3 mb-6">
         <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">8</div>
@@ -990,7 +1210,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="38" class="py-12">
+<section data-s="47" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="space-y-4">
         <div class="card-accent p-5 ch">
@@ -1025,7 +1245,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="39" class="py-12">
+<section data-s="48" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">En résumé</h3>
     <div class="overflow-x-auto">
@@ -1046,7 +1266,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S38-50: Récaps + exemples + conclusion ===== -->
-<section data-s="40" class="py-20">
+<section data-s="49" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr text-center">
     <div class="inline-block p-0.5 gradient-bg mb-4"><div class="px-6 py-2 bg-white font-mono text-sm font-bold">EXEMPLES CONCRETS</div></div>
     <h2 class="font-space font-bold text-3xl mb-4">Des exemples pour bien comprendre.</h2>
@@ -1054,7 +1274,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="41" class="py-8">
+<section data-s="50" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-5 ch">
         <div class="font-bold text-sm mb-2">Exemple 1 — Créer un site</div>
@@ -1064,7 +1284,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="42" class="py-8">
+<section data-s="51" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-5 ch">
         <div class="font-bold text-sm mb-2">Exemple 2 — Scraper des données</div>
@@ -1074,7 +1294,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="43" class="py-8">
+<section data-s="52" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-5 ch">
         <div class="font-bold text-sm mb-2">Exemple 3 — Modifier un projet existant</div>
@@ -1084,7 +1304,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="44" class="py-8">
+<section data-s="53" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-5 ch">
         <div class="font-bold text-sm mb-2">Exemple 4 — Générer du contenu</div>
@@ -1094,7 +1314,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="45" class="py-8">
+<section data-s="54" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-5 ch">
         <div class="font-bold text-sm mb-2">Exemple 5 — Corriger un bug</div>
@@ -1105,7 +1325,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S44: Ce qu'il faut retenir ===== -->
-<section data-s="46" class="py-20">
+<section data-s="55" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-3xl mb-6">Ce qu'il faut retenir de cette séance.</h2>
     <div class="space-y-3">
@@ -1122,7 +1342,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S45: Cheatsheet ===== -->
-<section data-s="47" class="py-16">
+<section data-s="56" class="py-16">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-2xl mb-6">Cheatsheet — garde ça sous la main.</h2>
     <div class="code border-sol-accent">
@@ -1159,7 +1379,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S46-48: La suite ===== -->
-<section data-s="48" class="py-16">
+<section data-s="57" class="py-16">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-2xl mb-4">La suite</h2>
     <p class="text-sol-gray leading-relaxed mb-6">Maintenant que tu connais Claude Code, on passe aux autres outils :</p>
@@ -1186,7 +1406,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="49" class="py-12">
+<section data-s="58" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-accent p-6">
         <h3 class="font-bold text-lg mb-3">Un truc à faire avant la prochaine séance</h3>
@@ -1195,7 +1415,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="50" class="py-16">
+<section data-s="59" class="py-16">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-6">
         <h4 class="font-bold mb-3">Si t'es bloqué</h4>
@@ -1210,7 +1430,7 @@ Dialogue → tu parles en français, il comprend
 </section>
 
 <!-- ===== S49-50: Fin ===== -->
-<section data-s="51" class="py-20">
+<section data-s="60" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr text-center">
     <h2 class="font-space font-bold text-3xl sm:text-4xl mb-4">Fin de la séance 1.</h2>
     <p class="text-sol-gray text-lg mb-2">Tu sais ce que c'est, comment l'installer, comment t'en servir.</p>
@@ -1218,7 +1438,7 @@ Dialogue → tu parles en français, il comprend
 </div>
 </section>
 
-<section data-s="52" class="py-12">
+<section data-s="61" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr text-center">
     <div class="inline-block p-1 gradient-bg"><div class="px-8 py-4 bg-white"><span class="font-space font-bold text-xl gradient-text">DENEM Academy</span></div></div>
     <p class="text-sol-gray text-xs mt-6 font-mono">Séance 1 — Claude Code — Acte 1 : Maîtriser</p>
@@ -1259,7 +1479,7 @@ document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-scale,.stagger-list,.revea
 // Section counter
 // ==========================================
 const allS=document.querySelectorAll('[data-s]'),sc=document.getElementById('sc');
-const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){sc.textContent=x.target.dataset.s+' / 52';sc.style.transform='scale(1.1)';setTimeout(()=>sc.style.transform='scale(1)',200)}})},{threshold:.3});
+const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){sc.textContent=x.target.dataset.s+' / 61';sc.style.transform='scale(1.1)';setTimeout(()=>sc.style.transform='scale(1)',200)}})},{threshold:.3});
 allS.forEach(s=>sco.observe(s));
 
 // ==========================================
