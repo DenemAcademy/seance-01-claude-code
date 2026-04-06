@@ -160,7 +160,11 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <body>
 
 <div class="progress-bar gradient-bg" id="pb"></div>
-<div class="sc" id="sc">1 / 52</div>
+<div class="sc" id="sc">1 / 60</div>
+
+<!-- Noise + Cursor -->
+<div class="noise"></div>
+<div class="cursor-glow" id="cg"></div>
 
 <!-- Nav -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-sol-lightgray" style="box-shadow:rgba(50,50,93,.06) 0px 2px 5px">
@@ -175,79 +179,50 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </div>
 </nav>
 
-<!-- Noise overlay -->
-<div class="noise"></div>
-<!-- Cursor glow -->
-<div class="cursor-glow" id="cg"></div>
 
-<!-- ===== S1: Hero ===== -->
+<!-- ============================================================ -->
+<!-- CHAPITRE 1 : BIENVENUE -->
+<!-- ============================================================ -->
+
 <section data-s="1" class="min-h-screen flex items-center justify-center relative pt-14 overflow-hidden">
-<!-- Floating shapes -->
 <div class="absolute top-20 right-16 w-16 h-16 border-2 border-sol-accent/15 rounded-lg rotate-12 animate-float hidden lg:block"></div>
 <div class="absolute top-40 left-12 w-10 h-10 border-2 border-sol-navy/10 rounded-full animate-float-slow hidden lg:block"></div>
 <div class="absolute bottom-32 right-24 w-8 h-8 bg-sol-cyan/10 rounded animate-float-reverse hidden lg:block"></div>
-<div class="absolute bottom-48 left-20 w-12 h-12 border-2 border-sol-accent/10 rounded-xl rotate-45 animate-float hidden lg:block" style="animation-delay:1s"></div>
-<div class="absolute top-1/3 right-1/4 w-3 h-3 bg-sol-accent/20 rounded-full animate-bounce-subtle hidden lg:block"></div>
-<div class="absolute bottom-1/4 left-1/3 w-2 h-2 bg-sol-navy/15 rounded-full animate-bounce-subtle hidden lg:block" style="animation-delay:.5s"></div>
-<!-- Dot pattern -->
 <div class="absolute inset-0 dots-overlay opacity-50"></div>
-
 <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
     <div class="sr"><span class="tag border-sol-accent text-sol-accent pulse-ring">Séance 1 sur 24</span></div>
     <h1 class="sr s1 font-space font-bold text-5xl sm:text-6xl md:text-7xl leading-[.92] mt-6 mb-6">
         <span class="gradient-text">Claude Code.</span><br><span class="text-sol-gray text-3xl sm:text-4xl">Ton outil principal.</span>
     </h1>
-    <p class="sr s2 text-lg text-sol-gray max-w-xl mx-auto leading-relaxed mb-8">C'est l'IA dans ton terminal. Tu lui parles, il construit. Pas besoin de savoir coder. Dans cette séance, tu apprends ce que c'est, comment l'installer, et comment t'en servir.</p>
-    <div class="sr s3 tb border-sol-accent text-sol-accent mx-auto animate-glow">
-        <span class="w-1.5 h-1.5 bg-sol-accent rounded-full"></span>
-        35-45 min de vidéo
-    </div>
-    <!-- Scroll hint -->
-    <div class="sr s4 mt-16 scroll-hint">
-        <div class="w-6 h-10 border-2 border-sol-navy/20 rounded-full mx-auto flex items-start justify-center p-1">
-            <div class="w-1 h-2.5 bg-sol-accent/40 rounded-full" style="animation:bounceSubtle 2s ease-in-out infinite"></div>
-        </div>
-    </div>
+    <p class="sr s2 text-lg text-sol-gray max-w-xl mx-auto leading-relaxed mb-8">Bienvenue dans ta première séance. Ici on va prendre le temps de tout t'expliquer : ce que c'est, combien ça coûte, comment l'installer, et comment t'en servir. Pas de panique, on avance ensemble, étape par étape.</p>
+    <div class="sr s3 tb border-sol-accent text-sol-accent mx-auto animate-glow"><span class="w-1.5 h-1.5 bg-sol-accent rounded-full"></span>35-45 min</div>
+    <div class="sr s4 mt-16 scroll-hint"><div class="w-6 h-10 border-2 border-sol-navy/20 rounded-full mx-auto flex items-start justify-center p-1"><div class="w-1 h-2.5 bg-sol-accent/40 rounded-full" style="animation:bounceSubtle 2s ease-in-out infinite"></div></div></div>
 </div>
 </section>
 
-<!-- Image: Demo GIF -->
+<!-- Demo GIF -->
 <section data-s="2" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-3 ch" style="overflow:hidden">
         <img src="https://github.com/anthropics/claude-code/raw/main/demo.gif" alt="Claude Code demo" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-        <p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code en action — démo officielle Anthropic</p>
+        <p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code en action — regarde, il code tout seul</p>
     </div>
 </div>
 </section>
 
-<!-- ===== S3: C'est quoi ===== -->
+<!-- ============================================================ -->
+<!-- CHAPITRE 2 : TU CONNAIS CHATGPT ? OUBLIE. -->
+<!-- ============================================================ -->
+
 <section data-s="3" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">1</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 1</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">C'est quoi Claude Code ?</h2>
-    <p class="text-sol-gray text-lg leading-relaxed">En une phrase : c'est une IA qui vit dans ton terminal et qui peut agir sur ton ordinateur. Tu lui dis ce que tu veux, elle le fait.</p>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Tu connais ChatGPT ?<br><span class="text-sol-gray">Ok. Oublie.</span></h2>
+    <p class="text-sol-gray text-lg leading-relaxed">ChatGPT c'est bien. Mais c'est un chatbot — tu poses une question, il te donne du texte. Après c'est à toi de copier-coller, créer les fichiers, tout faire à la main. Claude Code c'est pas ça. C'est un agent. Il agit sur ton ordinateur. Tu lui dis "crée-moi un site", il le fait. Pour de vrai.</p>
 </div>
 </section>
 
-<!-- ===== S3: Pas un chatbot ===== -->
 <section data-s="4" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-6">
-        <h3 class="font-bold text-xl mb-4">C'est pas un chatbot.</h3>
-        <p class="text-sol-gray leading-relaxed mb-4">ChatGPT, tu lui poses une question, il te donne du texte. C'est bien. Mais c'est toi qui dois copier-coller, créer les fichiers, tout faire à la main.</p>
-        <p class="text-sol-gray leading-relaxed">Claude Code c'est différent. Tu lui dis "crée-moi un site web" et il le fait. Vraiment. Il crée les fichiers, écrit le code, structure le projet. Toi tu regardes et tu ajustes.</p>
-    </div>
-</div>
-</section>
-
-<!-- ===== S4: La différence ===== -->
-<section data-s="5" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-6">La différence concrètement</h3>
     <div class="grid sm:grid-cols-2 gap-4">
         <div class="card-light p-5">
             <div class="font-bold text-sm mb-3 text-sol-gray">ChatGPT</div>
@@ -262,7 +237,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
             </div>
         </div>
         <div class="card-accent p-5">
-            <div class="font-bold text-sm mb-3 text-sol-accent">Claude Code</div>
+            <div class="font-bold text-sm mb-3" style="color:#4CC0C0">Claude Code</div>
             <div class="text-sol-gray text-sm space-y-2">
                 <p>→ Tu dis "crée un site web"</p>
                 <p>→ Il crée les fichiers</p>
@@ -277,565 +252,266 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </div>
 </section>
 
-<!-- ===== S5: Ce que ça change ===== -->
-<section data-s="6" class="py-12">
+<section data-s="5" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-green p-6">
         <h3 class="font-bold text-lg mb-3">Ce que ça change pour toi</h3>
-        <p class="text-sol-gray leading-relaxed">Tu sais pas coder ? C'est pas grave. Claude Code code pour toi. Toi tu donnes la direction, lui il construit. C'est un dialogue — tu décris ce que tu veux, il le fait, tu ajustes. Comme si t'avais un développeur à côté de toi H24.</p>
+        <p class="text-sol-gray leading-relaxed">Tu sais pas coder ? C'est pas grave. Claude Code code pour toi. Toi tu donnes la direction, lui il construit. C'est un dialogue — tu décris ce que tu veux, il le fait, tu ajustes. Comme si t'avais un développeur à côté de toi H24. Et c'est cet outil que tu vas utiliser dans presque toutes les séances de la formation.</p>
     </div>
 </div>
 </section>
 
-<!-- ===== S6: Installer — Intro ===== -->
-<section data-s="7" class="py-20">
+<!-- ============================================================ -->
+<!-- CHAPITRE 3 : COMBIEN ÇA COÛTE -->
+<!-- ============================================================ -->
+
+<section data-s="6" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">2</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 2</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Installer Claude Code.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed mb-6">5 minutes. 4 étapes. On y va.</p>
-    <!-- Demo GIF officielle Anthropic -->
-    
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Combien ça coûte ?</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">On va parler argent tout de suite parce que c'est la question que tout le monde se pose. Et la bonne nouvelle c'est que c'est pas cher du tout.</p>
 </div>
 </section>
 
-<!-- ===== S7: Ouvrir le terminal ===== -->
+<section data-s="7" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-6">Les abonnements</h3>
+    <div class="space-y-4">
+        <div class="card-accent p-6 ch">
+            <div class="flex items-center justify-between mb-3"><div class="font-bold text-lg">Pro</div><div class="font-space font-bold text-xl" style="color:#4CC0C0">20€/mois</div></div>
+            <p class="text-sol-gray text-sm leading-relaxed mb-3">C'est celui qu'on te recommande. Tu as Claude Code dans le terminal, sur le web, en app. Tu peux utiliser Sonnet et Opus. Le budget suffit largement pour des sessions de travail normales.</p>
+            <div class="card-light p-3"><p class="text-sol-gray text-xs"><strong>C'est celui qu'on prend pour la formation.</strong> 20€/mois, pas de surprise.</p></div>
+        </div>
+        <div class="card p-6 ch">
+            <div class="flex items-center justify-between mb-3"><div class="font-bold text-lg">Max 5x</div><div class="font-space font-bold text-xl text-sol-gray">100€/mois</div></div>
+            <p class="text-sol-gray text-sm leading-relaxed">5 fois plus de tokens. Pour ceux qui bossent dessus toute la journée et atteignent les limites du Pro. Pas pour le début — tu upgrades que si t'en as besoin.</p>
+        </div>
+        <div class="card p-6 ch">
+            <div class="flex items-center justify-between mb-3"><div class="font-bold text-lg">Max 20x</div><div class="font-space font-bold text-xl text-sol-gray">200€/mois</div></div>
+            <p class="text-sol-gray text-sm leading-relaxed">20 fois plus. Les limites disparaissent. C'est pour quand tu seras à fond sur les projets clients, pas maintenant.</p>
+        </div>
+    </div>
+</div>
+</section>
+
 <section data-s="8" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Et la clé API, c'est quoi ?</h3>
+    <p class="text-sol-gray text-sm mb-4">Tu vas entendre parler de "clé API". C'est une autre façon de payer — au token consommé, pas au forfait. C'est utile quand tu construis des chatbots ou des automatisations pour tes clients. Mais pour toi qui débute, c'est l'abonnement Pro qu'il te faut.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card-accent p-5 ch">
+            <div class="font-bold text-sm mb-2" style="color:#4CC0C0">Abonnement Pro ✓</div>
+            <div class="text-sol-gray text-xs space-y-1">
+                <p>→ Prix fixe : 20€/mois</p>
+                <p>→ Tu te connectes avec ton compte</p>
+                <p>→ Budget tokens inclus</p>
+                <p>→ <strong>C'est ce qu'on utilise</strong></p>
+            </div>
+        </div>
+        <div class="card p-5 ch">
+            <div class="font-bold text-sm mb-2 text-sol-gray">Clé API (plus tard)</div>
+            <div class="text-sol-gray text-xs space-y-1">
+                <p>→ Paiement par token</p>
+                <p>→ Pour les projets clients</p>
+                <p>→ Chatbots, automatisations</p>
+                <p>→ On voit ça en Acte 3</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section data-s="9" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Ça coûte quoi au quotidien ?</h3>
+    <p class="text-sol-gray text-sm mb-4">Avec le Pro à 20€/mois, voilà ce que tu peux faire :</p>
+    <div class="space-y-2">
+        <div class="card-light p-4 ch"><div class="flex items-center justify-between"><span class="text-sol-gray text-sm">Créer un site web complet</span><span class="font-mono text-xs" style="color:#4CC0C0">~0.50€</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center justify-between"><span class="text-sol-gray text-sm">Scraper 200 prospects</span><span class="font-mono text-xs" style="color:#4CC0C0">~0.30€</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center justify-between"><span class="text-sol-gray text-sm">Générer 10 articles de blog</span><span class="font-mono text-xs" style="color:#4CC0C0">~0.80€</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center justify-between"><span class="text-sol-gray text-sm">Corriger un bug</span><span class="font-mono text-xs" style="color:#4CC0C0">~0.10€</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center justify-between"><span class="text-sol-gray text-sm">Construire un chatbot</span><span class="font-mono text-xs" style="color:#4CC0C0">~1.50€</span></div></div>
+    </div>
+    <p class="text-sol-gray text-sm mt-4 italic">Avec 20€/mois t'as de la marge. Vraiment. Tu peux bosser tous les jours sans te soucier du prix.</p>
+</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPITRE 4 : ON INSTALLE ENSEMBLE -->
+<!-- ============================================================ -->
+
+<section data-s="10" class="py-20">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">On installe ensemble.</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">Ok, maintenant tu sais ce que c'est et combien ça coûte. On passe à l'action. 4 étapes, 5 minutes, et c'est prêt.</p>
+</div>
+</section>
+
+<!-- Étape 1 : Terminal -->
+<section data-s="11" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-2">Étape 1 — Ouvre ton terminal</h3>
-    <p class="text-sol-gray text-sm mb-4">Le terminal c'est une fenêtre où tu tapes des commandes. C'est là que Claude Code vit. Rien de compliqué — tout le monde peut le faire.</p>
+    <p class="text-sol-gray text-sm mb-4">Le terminal c'est une fenêtre où tu tapes des commandes. C'est là que Claude Code vit.</p>
     <div class="grid sm:grid-cols-2 gap-3">
         <div class="card-light p-5 ch">
             <div class="text-2xl mb-2 emoji">🍎</div>
             <div class="font-bold text-sm mb-2">Sur Mac</div>
             <div class="text-sol-gray text-xs space-y-2">
-                <p>1. Appuie sur <span class="code-inline">Cmd + Espace</span> (ça ouvre Spotlight)</p>
+                <p>1. <span class="code-inline">Cmd + Espace</span> (Spotlight)</p>
                 <p>2. Tape <span class="code-inline">Terminal</span></p>
-                <p>3. Appuie sur Entrée</p>
-                <p>4. Une fenêtre noire s'ouvre. C'est ton terminal.</p>
+                <p>3. Entrée</p>
             </div>
         </div>
         <div class="card-light p-5 ch">
             <div class="text-2xl mb-2 emoji">🪟</div>
             <div class="font-bold text-sm mb-2">Sur Windows</div>
             <div class="text-sol-gray text-xs space-y-2">
-                <p>1. Appuie sur la touche <span class="code-inline">Windows</span></p>
+                <p>1. Touche <span class="code-inline">Windows</span></p>
                 <p>2. Tape <span class="code-inline">PowerShell</span></p>
-                <p>3. Clique droit → <strong>"Exécuter en administrateur"</strong></p>
-                <p>4. Clique "Oui". Ton terminal est ouvert.</p>
+                <p>3. Clic droit → Exécuter en admin</p>
             </div>
         </div>
     </div>
-    <p class="text-sol-gray text-sm mt-4 italic">Si ça te fait bizarre au début, c'est normal. Tout le monde a cette réaction. En 10 minutes tu seras à l'aise.</p>
+    <p class="text-sol-gray text-sm mt-4 italic">Si ça fait bizarre au début, c'est normal. Tout le monde a cette réaction. En 10 minutes tu seras à l'aise.</p>
 </div>
 </section>
 
-<!-- ===== S8: Installer Claude Code ===== -->
-<section data-s="9" class="py-12">
+<!-- Étape 2 : Installer -->
+<section data-s="12" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-2">Étape 2 — Installer Claude Code</h3>
-    <p class="text-sol-gray text-sm mb-4">Une seule commande. Pas besoin d'installer autre chose avant — l'installeur natif gère tout tout seul.</p>
-
-    
-
-    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+    <p class="text-sol-gray text-sm mb-4">Une seule commande. Pas besoin d'installer autre chose avant.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-4">
         <div class="card-accent p-5 ch">
             <div class="text-2xl mb-2 emoji">🍎</div>
-            <div class="font-bold text-sm mb-3">Sur Mac / Linux</div>
-            <p class="text-sol-gray text-xs mb-3">Copie-colle cette commande dans ton terminal :</p>
+            <div class="font-bold text-sm mb-3">Mac / Linux</div>
             <div class="cmd text-xs">curl -fsSL https://claude.ai/install.sh | bash</div>
-            <p class="text-sol-gray text-xs mt-3">Ça télécharge et installe Claude Code en 30 secondes. Zéro dépendance. Ça gère tout.</p>
         </div>
         <div class="card-accent p-5 ch">
             <div class="text-2xl mb-2 emoji">🪟</div>
-            <div class="font-bold text-sm mb-3">Sur Windows</div>
-            <p class="text-sol-gray text-xs mb-3">Ouvre PowerShell et copie-colle :</p>
+            <div class="font-bold text-sm mb-3">Windows</div>
             <div class="cmd text-xs">irm https://claude.ai/install.ps1 | iex</div>
-            <p class="text-sol-gray text-xs mt-3">Même chose — télécharge, installe, configure. En une commande.</p>
         </div>
-    </div>
-
-    
-
-    <!-- Image: Terminal après installation -->
-    <div class="card p-3 mb-4" style="overflow:hidden">
-        <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/0.png" alt="Claude Code après installation" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-        <p class="text-sol-gray text-xs mt-2 text-center italic">Ce que tu vois après l'installation — Claude Code te demande de choisir ton style</p>
-    </div>
-
-    <div class="card-green p-4 mb-4">
-        <div class="font-bold text-sm mb-2">Méthode alternative (npm)</div>
-        <p class="text-sol-gray text-xs mb-2">Si tu préfères passer par npm (si t'as déjà Node.js) :</p>
-        <div class="cmd">npm install -g @anthropic-ai/claude-code</div>
-        <p class="text-sol-gray text-xs mt-2">Les deux méthodes installent la même chose. L'installeur natif est juste plus simple.</p>
-    </div>
-
-    <div class="card p-4">
-        <div class="font-bold text-sm mb-2">Vérifie que c'est installé</div>
-        <div class="cmd">claude --version</div>
-        <p class="text-sol-gray text-xs mt-2">Tu vois un numéro ? C'est bon, Claude Code est sur ton ordinateur.</p>
     </div>
 </div>
 </section>
 
-<!-- ===== S9: Ce qui se passe pendant l'installation ===== -->
-<section data-s="10" class="py-12">
+<section data-s="13" class="py-8">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Ce qui se passe pendant l'installation</h3>
-    <p class="text-sol-gray text-sm mb-4">Du texte va défiler dans ton terminal. C'est normal. Voilà ce que tu vois :</p>
+    <p class="text-sol-gray text-sm mb-4">Du texte va défiler. C'est normal. Voilà ce que tu vois :</p>
     <div class="terminal">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-            <span class="text-gray-500 text-xs ml-2 font-mono">Terminal</span>
-        </div>
+        <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div><span class="text-gray-500 text-xs ml-2 font-mono">Terminal</span></div>
         <div class="terminal-body">
             <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">curl -fsSL https://claude.ai/install.sh | bash</span></p>
             <p class="terminal-output mt-2">Downloading Claude Code...</p>
             <p class="terminal-output">Installing to /usr/local/bin/claude...</p>
             <p class="terminal-output">Setting up auto-updates...</p>
             <p class="terminal-output mt-2">✓ <span style="color:#30D9DE">Claude Code installed successfully!</span></p>
-            <p class="terminal-output mt-1">Run <span style="color:#fff">claude</span> to get started.</p>
         </div>
     </div>
-    <p class="text-sol-gray text-sm mt-4 italic">Si tu vois "installed successfully" c'est gagné. Si tu vois une erreur, regarde le troubleshooting en bas de cette page.</p>
-</div>
-</section>
-
-<!-- ===== S10: Créer un compte Anthropic ===== -->
-<section data-s="11" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-2">Étape 3 — Créer ton compte Anthropic</h3>
-    <p class="text-sol-gray text-sm mb-4">Claude Code a besoin d'un compte Anthropic pour fonctionner. C'est gratuit de créer le compte — tu paies que ce que tu utilises.</p>
-
-    
-
-    <div class="space-y-3">
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">1</div>
-            <div><p class="text-sol-gray text-sm">Va sur <span class="code-inline">console.anthropic.com</span></p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">2</div>
-            <div><p class="text-sol-gray text-sm">Clique <strong>"Sign up"</strong> — crée ton compte avec ton email</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">3</div>
-            <div><p class="text-sol-gray text-sm">Va dans <strong>"Billing"</strong> et ajoute une carte bancaire</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">4</div>
-            <div><p class="text-sol-gray text-sm">Ajoute <strong>5€ de crédits</strong> pour commencer — ça suffit largement pour tes premiers projets</p></div>
-        </div>
+    <!-- Screenshot -->
+    <div class="card p-3 mt-4" style="overflow:hidden">
+        <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/0.png" alt="Claude Code après installation" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
+        <p class="text-sol-gray text-xs mt-2 text-center italic">Après l'installation — Claude Code te demande de choisir ton style</p>
     </div>
-
-    <div class="grid sm:grid-cols-2 gap-3 mt-4">
-        
-        
-    </div>
-    <div class="grid sm:grid-cols-2 gap-3 mb-3">
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://fra1.digitaloceanspaces.com/chaterimo/static/img/blogs/how_anthropic_api_account/anthropic-sign-in.webp" alt="Sign in Anthropic" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">Créer un compte</p>
-        </div>
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://fra1.digitaloceanspaces.com/chaterimo/static/img/blogs/how_anthropic_api_account/payment_details_plan.webp" alt="Billing Anthropic" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">Ajouter un moyen de paiement</p>
-        </div>
-    </div>
-
     <div class="card-green p-4 mt-4">
-        <p class="text-sol-gray text-xs">Pas de panique sur le prix. Une conversation normale avec Claude Code coûte quelques centimes. Avec 5€ tu peux faire des dizaines de projets. On verra comment surveiller les coûts avec la commande <span class="code-inline">/cost</span> plus tard.</p>
+        <div class="font-bold text-sm mb-2">Méthode alternative (npm)</div>
+        <p class="text-sol-gray text-xs">Si tu préfères passer par npm (faut avoir Node.js) : <span class="code-inline">npm install -g @anthropic-ai/claude-code</span></p>
     </div>
-
-    
 </div>
 </section>
 
-<!-- ===== S11: Premier lancement ===== -->
-<section data-s="12" class="py-12">
+<!-- Étape 3 : Compte -->
+<section data-s="14" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-2">Étape 3 — Prends ton abonnement Pro</h3>
+    <p class="text-sol-gray text-sm mb-4">Va sur <span class="code-inline">claude.ai</span>, crée un compte, et prends l'abonnement Pro à 20€/mois.</p>
+    <div class="space-y-3">
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">1</div><div><p class="text-sol-gray text-sm">Va sur <span class="code-inline">claude.ai</span></p></div></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">2</div><div><p class="text-sol-gray text-sm">Clique <strong>"Sign up"</strong> — crée ton compte</p></div></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">3</div><div><p class="text-sol-gray text-sm">Va dans les paramètres → <strong>"Upgrade to Pro"</strong></p></div></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">4</div><div><p class="text-sol-gray text-sm">Ajoute ta carte — 20€/mois, résiliable à tout moment</p></div></div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-3 mt-4">
+        <div class="card p-2" style="overflow:hidden"><img src="https://fra1.digitaloceanspaces.com/chaterimo/static/img/blogs/how_anthropic_api_account/anthropic-sign-in.webp" alt="Sign in" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Créer un compte</p></div>
+        <div class="card p-2" style="overflow:hidden"><img src="https://fra1.digitaloceanspaces.com/chaterimo/static/img/blogs/how_anthropic_api_account/payment_details_plan.webp" alt="Billing" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Choisir le plan Pro</p></div>
+    </div>
+</div>
+</section>
+
+<!-- Étape 4 : Lancer -->
+<section data-s="15" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-2">Étape 4 — Premier lancement</h3>
     <p class="text-sol-gray text-sm mb-4">Le grand moment. Tape :</p>
     <div class="cmd text-lg">claude</div>
-
-    <!-- Image: Login prompt -->
-    <div class="card p-3 mt-4 mb-4" style="overflow:hidden">
-        <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/1.png" alt="Claude Code login" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-        <p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code te demande de te connecter</p>
+    <div class="card p-3 mt-4" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/1.png" alt="Login" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code te demande de te connecter</p></div>
+    <div class="space-y-3 mt-4">
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">1</div><p class="text-sol-gray text-sm">Il te demande comment tu veux te connecter — <strong>choisis "Claude account"</strong></p></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">2</div><p class="text-sol-gray text-sm">Ton navigateur s'ouvre — connecte-toi avec ton compte Pro</p></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">3</div><p class="text-sol-gray text-sm">Retourne dans le terminal — <strong>"Authentication complete"</strong></p></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">4</div><p class="text-sol-gray text-sm">Le curseur attend tes instructions. <strong>C'est prêt.</strong></p></div>
     </div>
-
-    <p class="text-sol-gray text-sm mt-4 mb-4">La première fois, Claude Code va te demander de te connecter. Voilà ce qui se passe :</p>
-
-    <div class="terminal mb-4">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-            <span class="text-gray-500 text-xs ml-2 font-mono">Terminal</span>
-        </div>
-        <div class="terminal-body">
-            <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">claude</span></p>
-            <p class="terminal-output mt-2">Welcome to Claude Code!</p>
-            <p class="terminal-output">Press Enter to open the browser and log in...</p>
-            <p class="terminal-output mt-2">✓ <span class="terminal-accent">Authentication complete</span></p>
-            <p class="terminal-output mt-3">╭─────────────────────────────────────╮</p>
-            <p class="terminal-output">│  <span class="terminal-accent">Claude Code</span> v1.0.12              │</p>
-            <p class="terminal-output">│  Prêt. Qu'est-ce que tu veux faire ? │</p>
-            <p class="terminal-output">╰─────────────────────────────────────╯</p>
-            <p class="mt-3"><span class="terminal-prompt">></span> <span class="terminal-cmd blink-cursor"></span></p>
-        </div>
-    </div>
-
-    <div class="space-y-3">
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">1</div>
-            <div><p class="text-sol-gray text-sm">Tu tapes <span class="code-inline">claude</span> et tu appuies sur Entrée</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">2</div>
-            <div><p class="text-sol-gray text-sm">Ton navigateur s'ouvre automatiquement — connecte-toi avec ton compte Anthropic</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">3</div>
-            <div><p class="text-sol-gray text-sm">Retourne dans le terminal — tu vois <strong>"Authentication complete"</strong></p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">4</div>
-            <div><p class="text-sol-gray text-sm">Le curseur attend tes instructions. <strong>C'est prêt.</strong></p></div>
-        </div>
-    </div>
-
-    
-
-    <!-- Image: Interface prête -->
-    <div class="card p-3 mt-4 mb-4" style="overflow:hidden">
-        <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/2.png" alt="Claude Code prêt" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-        <p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code est prêt — le curseur attend tes instructions</p>
-    </div>
-
+    <div class="card p-3 mt-4" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/2.png" alt="Ready" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code est prêt</p></div>
     <p class="text-sol-gray text-sm mt-4 italic">La connexion se fait qu'une seule fois. Les prochaines fois, tu tapes <span class="code-inline">claude</span> et c'est direct.</p>
 </div>
 </section>
 
-<!-- ===== S12: Récap installation ===== -->
-<section data-s="13" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="code border-sol-accent">
-        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — Installation en 4 étapes</div>
-        <div class="text-gray-400">
-            Étape 1 → Ouvrir le terminal<br>
-            Étape 2 → curl -fsSL https://claude.ai/install.sh | bash<br>
-            Étape 3 → Créer un compte sur console.anthropic.com<br>
-            Étape 4 → Taper "claude" et se connecter
-        </div>
-    </div>
-    <p class="text-sol-gray text-sm mt-4">4 étapes. 5 minutes. Tu passes de "j'ai rien" à "Claude Code est prêt".</p>
-
-    <div class="card-orange p-4 mt-4">
-        <div class="font-bold text-sm mb-2">Si t'es bloqué quelque part</div>
-        <div class="text-sol-gray text-xs space-y-1">
-            <p>→ <strong>"command not found: claude"</strong> → Ferme et rouvre le terminal après l'installation</p>
-            <p>→ <strong>"permission denied"</strong> → Ajoute <span class="code-inline">sudo</span> devant la commande (Mac)</p>
-            <p>→ <strong>"curl not found" (Windows)</strong> → Utilise la commande PowerShell : <span class="code-inline">irm https://claude.ai/install.ps1 | iex</span></p>
-            <p>→ <strong>Le navigateur s'ouvre pas</strong> → Va manuellement sur le lien affiché dans le terminal</p>
-            <p>→ <strong>Autre problème</strong> → Poste ta question dans le Slack de la formation avec un screenshot</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- ===== NOUVELLES SECTIONS : Abonnements + connexion ===== -->
-
-<!-- Les abonnements — intro -->
-<section data-s="14" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">2b</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 2 bis</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Quel abonnement choisir ?</h2>
-    <p class="text-sol-gray text-lg leading-relaxed mb-4">Ok, on va parler argent 2 minutes. Parce que c'est la question que tout le monde se pose : "ça coûte combien ce truc ?"</p>
-    <p class="text-sol-gray leading-relaxed">Y'a deux façons d'utiliser Claude Code : avec un <strong>abonnement mensuel</strong> (le plus simple) ou avec une <strong>clé API</strong> (paiement à l'usage). On va voir les deux.</p>
-</div>
-</section>
-
-<!-- Les 3 plans -->
-<section data-s="15" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-6">Les abonnements Claude</h3>
-    <div class="space-y-4">
-        <div class="card-accent p-6 ch">
-            <div class="flex items-center justify-between mb-3">
-                <div class="font-bold text-lg">Pro</div>
-                <div class="font-space font-bold text-xl" style="color:#4CC0C0">20€/mois</div>
-            </div>
-            <p class="text-sol-gray text-sm leading-relaxed mb-3">C'est celui qu'on recommande pour commencer. Tu as accès à Claude Code dans le terminal, sur le web, et en app Desktop. Tu peux utiliser les modèles Sonnet et Opus. Le budget de tokens suffit largement pour des sessions de travail normales.</p>
-            <div class="card-light p-3 mt-2">
-                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Pour toi qui débute. C'est 20€/mois, c'est simple, et ça couvre 90% de tes besoins pendant la formation.</p>
-            </div>
-        </div>
-
-        <div class="card p-6 ch">
-            <div class="flex items-center justify-between mb-3">
-                <div class="font-bold text-lg">Max 5x</div>
-                <div class="font-space font-bold text-xl text-sol-gray">100€/mois</div>
-            </div>
-            <p class="text-sol-gray text-sm leading-relaxed mb-3">5 fois plus de tokens que le Pro. Pour ceux qui utilisent Claude Code intensément — genre tu bosses dessus toute la journée et tu atteins les limites du Pro régulièrement.</p>
-            <div class="card-light p-3 mt-2">
-                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Si après quelques semaines tu te retrouves bloqué par les limites du Pro, tu passes sur celui-là.</p>
-            </div>
-        </div>
-
-        <div class="card p-6 ch">
-            <div class="flex items-center justify-between mb-3">
-                <div class="font-bold text-lg">Max 20x</div>
-                <div class="font-space font-bold text-xl text-sol-gray">200€/mois</div>
-            </div>
-            <p class="text-sol-gray text-sm leading-relaxed mb-3">20 fois plus de tokens. Les limites deviennent quasi inexistantes. C'est pour les gros utilisateurs qui passent 8h/jour sur Claude Code.</p>
-            <div class="card-light p-3 mt-2">
-                <p class="text-sol-gray text-xs"><strong>Pour qui ?</strong> Quand tu seras à fond sur les projets clients et que tu livres plusieurs missions en même temps. Pas pour le début.</p>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Mon conseil -->
+<!-- Récap install -->
 <section data-s="16" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card-green p-6">
-        <h4 class="font-bold text-lg mb-3">Mon conseil</h4>
-        <p class="text-sol-gray text-sm leading-relaxed mb-3">Commence avec le <strong>Pro à 20€/mois</strong>. C'est ce qu'il te faut pour la formation. Tu vas pas atteindre les limites au début.</p>
-        <p class="text-sol-gray text-sm leading-relaxed mb-3">Si au bout de 3-4 semaines tu te retrouves bloqué par les limites (ça arrive quand tu bosses vraiment intensément), tu passes sur le Max 5x. Pas avant.</p>
-        <p class="text-sol-gray text-sm leading-relaxed">Et tu peux changer de plan à tout moment. C'est pas un engagement — tu upgrades ou tu downgrades quand tu veux.</p>
+    <div class="code border-sol-accent">
+        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — 4 étapes</div>
+        <div class="text-gray-400">
+            1. Ouvrir le terminal<br>
+            2. curl -fsSL https://claude.ai/install.sh | bash<br>
+            3. Prendre l'abonnement Pro sur claude.ai<br>
+            4. Taper "claude" et se connecter
+        </div>
+    </div>
+    <div class="card-orange p-4 mt-4">
+        <div class="font-bold text-sm mb-2">Si t'es bloqué</div>
+        <div class="text-sol-gray text-xs space-y-1">
+            <p>→ <strong>"command not found: claude"</strong> — ferme et rouvre le terminal</p>
+            <p>→ <strong>"permission denied"</strong> — ajoute <span class="code-inline">sudo</span> devant la commande</p>
+            <p>→ <strong>Le navigateur s'ouvre pas</strong> — va manuellement sur le lien affiché</p>
+            <p>→ <strong>Autre</strong> — poste ta question sur le Slack avec un screenshot</p>
+        </div>
     </div>
 </div>
 </section>
 
-<!-- API vs Abonnement -->
-<section data-s="17" class="py-12">
+<!-- ============================================================ -->
+<!-- CHAPITRE 5 : COMMENT ÇA MARCHE -->
+<!-- ============================================================ -->
+
+<section data-s="17" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Abonnement vs API — c'est quoi la différence ?</h3>
-    <p class="text-sol-gray text-sm mb-4">Tu vas entendre parler de "clé API" et d'"abonnement". Voilà la différence en simple :</p>
-    <div class="grid sm:grid-cols-2 gap-4">
-        <div class="card-accent p-5 ch">
-            <div class="font-bold text-sm mb-2" style="color:#4CC0C0">Abonnement (Pro / Max)</div>
-            <div class="text-sol-gray text-xs space-y-2">
-                <p>→ Tu paies un prix fixe par mois</p>
-                <p>→ Tu te connectes avec ton compte Claude</p>
-                <p>→ T'as un budget de tokens inclus</p>
-                <p>→ C'est le plus simple</p>
-                <p>→ <strong>C'est ce qu'on utilise dans la formation</strong></p>
-            </div>
-        </div>
-        <div class="card p-5 ch">
-            <div class="font-bold text-sm mb-2 text-sol-gray">Clé API (paiement à l'usage)</div>
-            <div class="text-sol-gray text-xs space-y-2">
-                <p>→ Tu paies par token consommé</p>
-                <p>→ Tu utilises une clé API</p>
-                <p>→ Pas de limite fixe — tu paies ce que tu consommes</p>
-                <p>→ C'est pour l'automatisation et les projets avancés</p>
-                <p>→ On verra ça plus tard dans la formation</p>
-            </div>
-        </div>
-    </div>
-    <p class="text-sol-gray text-sm mt-4 italic">Pour l'instant, prends juste l'abonnement Pro. La clé API c'est pour plus tard quand tu construiras des chatbots et des automatisations pour tes clients.</p>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Comment ça marche.</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">Ok, t'es installé, connecté. Maintenant on regarde comment ça fonctionne concrètement.</p>
 </div>
 </section>
 
-<!-- Comment connecter Claude Code à ton abonnement -->
+<!-- L'interface -->
 <section data-s="18" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Connecter Claude Code à ton abonnement</h3>
-    <p class="text-sol-gray text-sm mb-4">Quand tu lances <span class="code-inline">claude</span> pour la première fois, il va te proposer de te connecter. C'est là que tu choisis ton mode :</p>
-    <div class="space-y-3">
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">1</div>
-            <div><p class="text-sol-gray text-sm">Tu tapes <span class="code-inline">claude</span> dans le terminal</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">2</div>
-            <div><p class="text-sol-gray text-sm">Il te demande comment tu veux te connecter — <strong>choisis "Claude account"</strong> (pas "API key")</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">3</div>
-            <div><p class="text-sol-gray text-sm">Ton navigateur s'ouvre — connecte-toi avec le compte sur lequel t'as pris l'abonnement Pro</p></div>
-        </div>
-        <div class="flex items-start gap-4">
-            <div class="step border-sol-accent text-sol-accent">4</div>
-            <div><p class="text-sol-gray text-sm">C'est fait. Claude Code utilise ton abonnement. Pas de surprise sur la facture.</p></div>
-        </div>
+    <h3 class="font-space font-bold text-xl mb-4">Tu peux l'utiliser de 4 façons</h3>
+    <div class="grid sm:grid-cols-2 gap-3 mb-4">
+        <div class="card p-2" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/3.png" alt="VS Code" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Dans VS Code</p></div>
+        <div class="card p-2" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/5.png" alt="VS Code interface" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Interface VS Code</p></div>
+        <div class="card p-2" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/6.png" alt="Web" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Sur le web</p></div>
+        <div class="card p-2" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/14.png" alt="Desktop" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">App Desktop</p></div>
     </div>
-
-    <div class="card-orange p-4 mt-4">
-        <div class="font-bold text-sm mb-2">Attention à ce piège</div>
-        <p class="text-sol-gray text-xs">Si tu as une variable <span class="code-inline">ANTHROPIC_API_KEY</span> sur ton système (de tests précédents par exemple), Claude Code va l'utiliser à la place de ton abonnement — et tu seras facturé en API au lieu d'utiliser ton forfait. Si t'es pas sûr, tape <span class="code-inline">claude logout</span> puis <span class="code-inline">claude login</span> et reconnecte-toi avec ton compte Claude.</p>
-    </div>
+    <p class="text-sol-gray text-xs italic">Terminal, VS Code, web, Desktop — tu choisis. Nous on utilise le terminal dans la formation.</p>
 </div>
 </section>
 
-<!-- Le prix réel -->
+<!-- Le dialogue -->
 <section data-s="19" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Concrètement, ça coûte combien au quotidien ?</h3>
-    <p class="text-sol-gray text-sm leading-relaxed mb-4">Avec le Pro à 20€/mois, voilà ce que tu peux faire :</p>
-    <div class="space-y-2">
-        <div class="card-light p-4 ch">
-            <div class="flex items-center justify-between">
-                <span class="text-sol-gray text-sm">Créer un site web complet</span>
-                <span class="font-mono text-xs" style="color:#4CC0C0">~0.50€ de tokens</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center justify-between">
-                <span class="text-sol-gray text-sm">Scraper 200 prospects</span>
-                <span class="font-mono text-xs" style="color:#4CC0C0">~0.30€ de tokens</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center justify-between">
-                <span class="text-sol-gray text-sm">Générer 10 articles de blog</span>
-                <span class="font-mono text-xs" style="color:#4CC0C0">~0.80€ de tokens</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center justify-between">
-                <span class="text-sol-gray text-sm">Corriger un bug dans un projet</span>
-                <span class="font-mono text-xs" style="color:#4CC0C0">~0.10€ de tokens</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center justify-between">
-                <span class="text-sol-gray text-sm">Construire un chatbot complet</span>
-                <span class="font-mono text-xs" style="color:#4CC0C0">~1.50€ de tokens</span>
-            </div>
-        </div>
-    </div>
-    <p class="text-sol-gray text-sm mt-4">Avec 20€/mois t'as de la marge. Vraiment. Tu vas pas atteindre la limite en mode normal.</p>
-</div>
-</section>
-
-<!-- La commande /cost -->
-<section data-s="20" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Comment surveiller tes coûts</h3>
-    <p class="text-sol-gray text-sm mb-4">À n'importe quel moment dans Claude Code, tape :</p>
-    <div class="cmd">/cost</div>
-    <p class="text-sol-gray text-sm mt-4 mb-4">Tu vois exactement combien tu as consommé dans la conversation en cours. C'est transparent — pas de surprise.</p>
+    <h3 class="font-space font-bold text-xl mb-4">C'est un dialogue, pas un formulaire</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">Tu parles, il fait, tu corriges, il ajuste. C'est comme bosser avec quelqu'un. Regarde :</p>
     <div class="terminal">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-        </div>
-        <div class="terminal-body">
-            <p><span class="terminal-prompt">></span> <span class="terminal-cmd">/cost</span></p>
-            <p class="terminal-output mt-2">Session cost: $0.42</p>
-            <p class="terminal-output">Input tokens: 12,847</p>
-            <p class="terminal-output">Output tokens: 3,291</p>
-        </div>
-    </div>
-    <p class="text-sol-gray text-xs mt-4 italic">0.42$ pour une session de travail. C'est rien. Tu pourrais travailler toute la journée et rester sous les 5€.</p>
-</div>
-</section>
-
-<!-- Petit récap prix -->
-<section data-s="21" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="code border-sol-accent">
-        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — Les prix</div>
-        <div class="text-gray-400">
-            Pro → 20€/mois (c'est celui qu'on prend)<br>
-            Max 5x → 100€/mois (si tu atteins les limites)<br>
-            Max 20x → 200€/mois (quand tu seras à fond)<br>
-            <br>
-            Comment se connecter → "claude" puis "Claude account"<br>
-            Surveiller les coûts → /cost<br>
-            Changer de plan → claude.com/settings à tout moment
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Transition vers interface -->
-<section data-s="22" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <p class="text-sol-gray text-lg leading-relaxed text-center">Ok, maintenant que t'es installé, connecté et que tu sais combien ça coûte — on regarde comment ça marche concrètement.</p>
-</div>
-</section>
-
-<!-- ===== S12-13: L'interface ===== -->
-<section data-s="23" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">3</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 3</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">L'interface — à quoi ça ressemble.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed mb-6">Quand tu lances Claude Code, voilà ce que tu vois. Et tu peux l'utiliser de 4 façons différentes :</p>
-    <div class="grid sm:grid-cols-2 gap-3 mb-4">
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/3.png" alt="VS Code extension" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">Extension VS Code</p>
-        </div>
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/5.png" alt="VS Code interface" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">Interface dans VS Code</p>
-        </div>
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/6.png" alt="Web interface" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">Sur le web (claude.ai)</p>
-        </div>
-        <div class="card p-2" style="overflow:hidden">
-            <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/14.png" alt="Desktop app" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-            <p class="text-sol-gray text-xs mt-2 text-center italic">App Desktop</p>
-        </div>
-    </div>
-    <p class="text-sol-gray text-xs mb-6 italic">Terminal, VS Code, web, Desktop — tu choisis. Nous dans la formation on utilise le terminal.</p>
-
-        
-    </div>
-    
-</div>
-</section>
-
-<section data-s="24" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="terminal">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-            <span class="text-gray-500 text-xs ml-2 font-mono">Terminal — claude</span>
-        </div>
-        <div class="terminal-body">
-            <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">claude</span></p>
-            <p class="terminal-output mt-2">╭─────────────────────────────────────╮</p>
-            <p class="terminal-output">│  <span class="terminal-accent">Claude Code</span> v1.0.12              │</p>
-            <p class="terminal-output">│  Prêt. Qu'est-ce que tu veux faire ? │</p>
-            <p class="terminal-output">╰─────────────────────────────────────╯</p>
-            <p class="mt-3"><span class="terminal-prompt">></span> <span class="terminal-cmd blink-cursor">_</span></p>
-        </div>
-    </div>
-    <p class="text-sol-gray text-sm mt-4">C'est ça. Un curseur qui attend tes instructions. Tu tapes en français, il comprend et il agit.</p>
-</div>
-</section>
-
-<!-- ===== S14: Mode interactif ===== -->
-<section data-s="25" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">C'est un dialogue</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">C'est pas un formulaire où tu remplis des champs. C'est une conversation. Tu parles, il fait, tu corriges, il ajuste. Comme avec un humain.</p>
-    <div class="terminal">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-        </div>
+        <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div></div>
         <div class="terminal-body">
             <p><span class="terminal-prompt">></span> <span class="terminal-cmd">Crée un fichier HTML avec un titre "Mon Site"</span></p>
             <p class="terminal-output mt-2">✓ Fichier créé : index.html</p>
@@ -845,508 +521,267 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
             <p class="terminal-output mt-2">✓ Section ajoutée dans index.html</p>
         </div>
     </div>
-    <p class="text-sol-gray text-sm mt-4 mb-6">Tu vois ? Tu décris → il fait → tu ajustes → il corrige. C'est fluide.</p>
-
-    
-    <div class="grid sm:grid-cols-2 gap-3">
-        
-        
-    </div>
-    
 </div>
 </section>
 
-<!-- ===== S15: Les fichiers ===== -->
-<section data-s="26" class="py-12">
+<!-- Les fichiers -->
+<section data-s="20" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Les fichiers qu'il crée</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">Quand Claude Code crée des fichiers, ils apparaissent dans le dossier où tu es. Par exemple, si tu es dans <span class="code-inline">~/projets/mon-site</span>, les fichiers seront là.</p>
-    <div class="code border-sol-cyan">
-        <div style="color:#15be53" class="mb-2 font-bold">// Exemple de structure créée</div>
-        <div class="text-gray-400">
-mon-site/<br>
-├── index.html<br>
-├── styles.css<br>
-├── script.js<br>
-└── images/
-        </div>
+    <h3 class="font-space font-bold text-xl mb-4">Il crée de vrais fichiers</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">Quand Claude Code crée des fichiers, ils apparaissent dans ton dossier. C'est des vrais fichiers que tu peux ouvrir, modifier, envoyer à un client.</p>
+    <div class="code border-sol-accent">
+        <div style="color:#4CC0C0" class="mb-2 font-bold">// Exemple</div>
+        <div class="text-gray-400">mon-site/<br>├── index.html<br>├── styles.css<br>├── script.js<br>└── images/</div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Tu peux les ouvrir dans ton navigateur, les modifier, les envoyer à un client. C'est des vrais fichiers.</p>
 </div>
 </section>
 
-<!-- ===== S16: Le contexte ===== -->
-<section data-s="27" class="py-12">
+<!-- Il voit le contexte -->
+<section data-s="21" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Il voit ce qui est autour de lui</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">Claude Code voit tous les fichiers du dossier où tu es. Si t'as déjà un projet avec du code, il le lit et il comprend. Tu peux lui dire :</p>
+    <h3 class="font-space font-bold text-xl mb-4">Il voit tout ce qui est dans ton dossier</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">Claude Code lit les fichiers autour de lui. Si t'as déjà un projet, il le comprend. Tu peux lui dire :</p>
     <div class="space-y-2">
         <div class="cmd">Lis le fichier index.html et dis-moi ce qu'il contient</div>
-        <div class="cmd">Modifie le header pour ajouter un menu de navigation</div>
+        <div class="cmd">Modifie le header pour ajouter un menu</div>
         <div class="cmd">Corrige le bug dans le formulaire de contact</div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Il a le contexte. Il voit ton projet. Il sait ce qu'il y a dedans.</p>
 </div>
 </section>
 
-<!-- ===== S17-18: Partie 4 — Comment lui parler ===== -->
-<section data-s="28" class="py-20">
+<!-- Surveiller les coûts -->
+<section data-s="22" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">4</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 4</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Comment lui parler.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed">C'est la compétence la plus importante. Mieux tu lui parles, meilleur est le résultat.</p>
-</div>
-</section>
-
-<section data-s="29" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Règle n°1 — Sois précis</h3>
-    <div class="grid sm:grid-cols-2 gap-4">
-        <div class="card-orange p-5">
-            <div class="font-bold text-sm mb-2 text-sol-orange">Vague (mauvais)</div>
-            <p class="text-sol-gray text-sm italic">"Fais-moi un site"</p>
-            <p class="text-sol-gray text-xs mt-2">Claude Code sait pas ce que tu veux. Il va faire un truc générique.</p>
-        </div>
-        <div class="card-green p-5">
-            <div class="font-bold text-sm mb-2 text-sol-accent">Précis (bien)</div>
-            <p class="text-sol-gray text-sm italic">"Crée un site vitrine pour un plombier à Lyon. Page d'accueil avec un hero, une section services avec 4 cartes, et un formulaire de contact."</p>
-            <p class="text-sol-gray text-xs mt-2">Claude Code sait exactement quoi faire.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- ===== S19: Donner du contexte ===== -->
-<section data-s="30" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Règle n°2 — Donne du contexte</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">Dis-lui pour qui, pour quoi, quel style. Plus il en sait, mieux c'est.</p>
+    <h3 class="font-space font-bold text-xl mb-4">Surveille tes coûts à tout moment</h3>
+    <p class="text-sol-gray text-sm mb-4">Tape <span class="code-inline">/cost</span> n'importe quand pour voir combien tu consommes :</p>
     <div class="terminal">
-        <div class="terminal-bar">
-            <div class="terminal-dot" style="background:#ff5f57"></div>
-            <div class="terminal-dot" style="background:#febc2e"></div>
-            <div class="terminal-dot" style="background:#28c840"></div>
-        </div>
+        <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div></div>
         <div class="terminal-body">
-            <p><span class="terminal-prompt">></span> <span class="terminal-cmd">Crée un script qui scrape les restaurants de Lyon sur Google Maps. Je veux le nom, l'adresse, le téléphone et la note. Exporte en CSV. Le style de code doit être simple et commenté parce que je débute.</span></p>
+            <p><span class="terminal-prompt">></span> <span class="terminal-cmd">/cost</span></p>
+            <p class="terminal-output mt-2">Session cost: $0.42</p>
+            <p class="terminal-output">Input tokens: 12,847</p>
+            <p class="terminal-output">Output tokens: 3,291</p>
         </div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Tu vois ? T'as dit quoi (scraper des restos), d'où (Google Maps Lyon), quoi récupérer (nom, adresse, tel, note), quel format (CSV), et ton niveau (débutant). Claude Code va te livrer exactement ça.</p>
+    <p class="text-sol-gray text-xs mt-4 italic">0.42$ pour une session complète. C'est rien du tout.</p>
 </div>
 </section>
 
-<!-- ===== S20: Itérer ===== -->
-<section data-s="31" class="py-12">
+<!-- ============================================================ -->
+<!-- CHAPITRE 6 : COMMENT BIEN LUI PARLER -->
+<!-- ============================================================ -->
+
+<section data-s="23" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Règle n°3 — Itère</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">Tu vas pas avoir le résultat parfait du premier coup. Et c'est normal. Le process c'est :</p>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Comment bien lui parler.</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">C'est la compétence la plus importante. Mieux tu lui parles, meilleur est le résultat. 3 règles simples.</p>
+</div>
+</section>
+
+<section data-s="24" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Règle 1 — Sois précis</h3>
+    <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card-orange p-5"><div class="font-bold text-sm mb-2 text-sol-orange">Vague</div><p class="text-sol-gray text-sm italic">"Fais-moi un site"</p><p class="text-sol-gray text-xs mt-2">Il sait pas ce que tu veux. Résultat générique.</p></div>
+        <div class="card-green p-5"><div class="font-bold text-sm mb-2" style="color:#4CC0C0">Précis</div><p class="text-sol-gray text-sm italic">"Crée un site vitrine pour un plombier à Lyon. Page d'accueil avec un hero, services avec 4 cartes, formulaire de contact."</p><p class="text-sol-gray text-xs mt-2">Il sait exactement quoi faire.</p></div>
+    </div>
+</div>
+</section>
+
+<section data-s="25" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Règle 2 — Donne du contexte</h3>
+    <p class="text-sol-gray text-sm mb-4">Dis-lui pour qui, pour quoi, quel style. Plus il en sait, mieux c'est.</p>
+    <div class="terminal">
+        <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div></div>
+        <div class="terminal-body"><p><span class="terminal-prompt">></span> <span class="terminal-cmd">Crée un script qui scrape les restaurants de Lyon sur Google Maps. Je veux le nom, l'adresse, le téléphone et la note. Exporte en CSV. Code simple et commenté parce que je débute.</span></p></div>
+    </div>
+    <p class="text-sol-gray text-xs mt-4">Tu vois ? Quoi, d'où, quoi récupérer, quel format, et ton niveau. Claude Code te livre exactement ça.</p>
+</div>
+</section>
+
+<section data-s="26" class="py-12">
+<div class="max-w-3xl mx-auto px-4 sr">
+    <h3 class="font-space font-bold text-xl mb-4">Règle 3 — Itère</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">Tu vas pas avoir le résultat parfait du premier coup. Et c'est normal. Le process :</p>
     <div class="space-y-3">
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">1</div><p class="text-sol-gray text-sm">Tu donnes une instruction</p></div>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">2</div><p class="text-sol-gray text-sm">Tu regardes le résultat</p></div>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">3</div><p class="text-sol-gray text-sm">Tu corriges : "change ça", "ajoute ça", "enlève ça"</p></div>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">4</div><p class="text-sol-gray text-sm">Tu re-regardes</p></div>
-        <div class="flex items-start gap-4"><div class="step border-sol-cyan text-sol-accent">5</div><p class="text-sol-gray text-sm">Quand c'est bon, tu passes à la suite</p></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent" style="border-color:#4CC0C0;color:#4CC0C0">5</div><p class="text-sol-gray text-sm">Quand c'est bon, tu passes à la suite</p></div>
     </div>
-    <p class="text-sol-gray text-sm mt-4 italic">C'est comme travailler avec quelqu'un. Tu guides, il exécute, tu ajustes. Ça va vite.</p>
 </div>
 </section>
 
-<!-- ===== S21: CLAUDE.md ===== -->
-<section data-s="32" class="py-12">
+<!-- CLAUDE.md -->
+<section data-s="27" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Le fichier CLAUDE.md</h3>
-    <p class="text-sol-gray leading-relaxed mb-4">C'est un fichier texte que tu mets à la racine de ton projet. Claude Code le lit automatiquement à chaque fois. C'est son "briefing" — il sait qui tu es, ce que tu fais, comment tu veux qu'il travaille.</p>
+    <h3 class="font-space font-bold text-xl mb-4">Le fichier CLAUDE.md — le briefing permanent</h3>
+    <p class="text-sol-gray text-sm leading-relaxed mb-4">C'est un fichier texte que tu mets dans ton projet. Claude Code le lit automatiquement à chaque session. Il sait qui tu es, ce que tu fais, comment tu veux bosser. Plus besoin de répéter le contexte.</p>
     <div class="code border-sol-accent">
-        <div class="text-sol-accent mb-2 font-bold">// Exemple de CLAUDE.md</div>
-        <div class="text-gray-400">
-# Mon projet<br><br>
-## Contexte<br>
-Je suis Expert IA freelance. Ce projet est un site<br>
-vitrine pour mon activité.<br><br>
-## Stack<br>
-- HTML / Tailwind CSS<br>
-- Déploiement sur WordPress<br><br>
-## Règles<br>
-- Code simple et commenté<br>
-- Design moderne, fond blanc<br>
-- Mobile-first<br>
-- SEO optimisé dès le départ
-        </div>
+        <div style="color:#4CC0C0" class="mb-2 font-bold">// Exemple de CLAUDE.md</div>
+        <div class="text-gray-400"># Mon projet<br><br>## Contexte<br>Site vitrine pour mon activité d'Expert IA freelance.<br><br>## Stack<br>HTML / Tailwind CSS / WordPress<br><br>## Règles<br>- Code simple et commenté<br>- Design moderne, fond blanc<br>- Mobile-first<br>- SEO optimisé</div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Tu le crées une fois, Claude Code le lit à chaque session. Plus besoin de répéter le contexte.</p>
+    <p class="text-sol-gray text-xs mt-4">Tu le crées une fois. Ou tape <span class="code-inline">/init</span> et Claude Code le génère pour toi.</p>
 </div>
 </section>
 
-<!-- ===== S22: Créer un CLAUDE.md ===== -->
-<section data-s="33" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Comment le créer</h3>
-    <p class="text-sol-gray text-sm mb-3">Tu peux même demander à Claude Code de le faire :</p>
-    <div class="cmd">Crée un fichier CLAUDE.md pour ce projet. C'est un site vitrine pour un expert IA freelance. Stack : HTML + Tailwind. Design moderne, fond blanc, mobile-first.</div>
-    <p class="text-sol-gray text-sm mt-4">Ou utilise la commande :</p>
-    <div class="cmd mt-2">/init</div>
-    <p class="text-sol-gray text-sm mt-2">Claude Code analyse ton projet et génère un CLAUDE.md automatiquement.</p>
-</div>
-</section>
+<!-- ============================================================ -->
+<!-- CHAPITRE 7 : LES COMMANDES -->
+<!-- ============================================================ -->
 
-<!-- ===== S23-24: Partie 5 — Commandes ===== -->
-<section data-s="34" class="py-20">
+<section data-s="28" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">5</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 5</span>
-    </div>
     <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Les commandes essentielles.</h2>
     <p class="text-sol-gray text-lg leading-relaxed">Y'en a pas 50. Voilà celles que tu vas utiliser tous les jours.</p>
 </div>
 </section>
 
-<section data-s="35" class="py-12">
+<section data-s="29" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Les slash commands</h3>
-    <p class="text-sol-gray text-sm mb-4">Dans Claude Code, les commandes qui commencent par <span class="code-inline">/</span> sont des raccourcis :</p>
     <div class="space-y-3">
-        <div class="card-light p-4 ch">
-            <div class="flex items-center gap-3">
-                <span class="code-inline">/help</span>
-                <span class="text-sol-gray text-sm">Voir toutes les commandes disponibles</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center gap-3">
-                <span class="code-inline">/clear</span>
-                <span class="text-sol-gray text-sm">Repartir de zéro — effacer la conversation</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center gap-3">
-                <span class="code-inline">/cost</span>
-                <span class="text-sol-gray text-sm">Voir combien t'as dépensé en tokens</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center gap-3">
-                <span class="code-inline">/compact</span>
-                <span class="text-sol-gray text-sm">Compresser la conversation quand elle devient longue</span>
-            </div>
-        </div>
-        <div class="card-light p-4 ch">
-            <div class="flex items-center gap-3">
-                <span class="code-inline">/init</span>
-                <span class="text-sol-gray text-sm">Générer un CLAUDE.md automatiquement</span>
-            </div>
-        </div>
+        <div class="card-light p-4 ch"><div class="flex items-center gap-3"><span class="code-inline">/help</span><span class="text-sol-gray text-sm">Voir toutes les commandes</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center gap-3"><span class="code-inline">/clear</span><span class="text-sol-gray text-sm">Repartir de zéro</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center gap-3"><span class="code-inline">/cost</span><span class="text-sol-gray text-sm">Voir combien t'as dépensé</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center gap-3"><span class="code-inline">/compact</span><span class="text-sol-gray text-sm">Compresser quand la conversation est longue</span></div></div>
+        <div class="card-light p-4 ch"><div class="flex items-center gap-3"><span class="code-inline">/init</span><span class="text-sol-gray text-sm">Générer un CLAUDE.md automatiquement</span></div></div>
     </div>
 </div>
 </section>
 
-<!-- ===== S25: Commandes fichiers ===== -->
-<section data-s="36" class="py-12">
+<section data-s="30" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Gérer les fichiers</h3>
-    <p class="text-sol-gray text-sm mb-4">Tu parles en français, Claude Code comprend :</p>
+    <p class="text-sol-gray text-sm mb-4">Tu parles en français :</p>
     <div class="space-y-2">
         <div class="cmd">Lis le fichier index.html</div>
         <div class="cmd">Modifie le titre dans index.html</div>
         <div class="cmd">Crée un nouveau fichier contact.html</div>
-        <div class="cmd">Supprime le fichier test.js</div>
         <div class="cmd">Montre-moi la structure du projet</div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Pas de syntaxe spéciale. Tu parles normalement.</p>
 </div>
 </section>
 
-<!-- ===== S26: Exécuter des commandes ===== -->
-<section data-s="37" class="py-12">
+<section data-s="31" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">Exécuter des commandes</h3>
-    <p class="text-sol-gray text-sm mb-4">Claude Code peut aussi lancer des commandes système :</p>
+    <h3 class="font-space font-bold text-xl mb-4">Lancer des commandes</h3>
+    <p class="text-sol-gray text-sm mb-4">Claude Code peut exécuter des commandes système :</p>
     <div class="space-y-2">
         <div class="cmd">Lance un serveur local pour voir le site</div>
         <div class="cmd">Installe la librairie tailwindcss</div>
-        <div class="cmd">Fais un git commit avec le message "première version"</div>
+        <div class="cmd">Fais un git commit avec le message "v1"</div>
     </div>
-    <p class="text-sol-gray text-sm mt-4">Il te demandera confirmation avant d'exécuter. Tu valides, il lance.</p>
+    <p class="text-sol-gray text-xs mt-4">Il te demande confirmation avant d'exécuter. Tu valides, il lance.</p>
 </div>
 </section>
 
-<!-- ===== S27: Récap commandes ===== -->
-<section data-s="38" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="code border-sol-accent">
-        <div class="text-sol-accent mb-2 font-bold">// Les commandes à retenir</div>
-        <div class="text-gray-400">
-Slash commands → /help, /clear, /cost, /compact, /init<br>
-Fichiers → "lis", "modifie", "crée", "supprime"<br>
-Commandes → "lance", "installe", "git commit"<br>
-Contexte → CLAUDE.md à la racine du projet<br>
-Dialogue → tu parles en français, il comprend
-        </div>
-    </div>
-</div>
-</section>
+<!-- ============================================================ -->
+<!-- CHAPITRE 8 : LES LIMITES -->
+<!-- ============================================================ -->
 
-<!-- ===== S28-29: Partie 6 — Ce que tu peux construire ===== -->
-<section data-s="39" class="py-20">
+<section data-s="32" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">6</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 6</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Ce que tu peux construire.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed mb-6">Voilà les types de projets qu'on va construire avec Claude Code pendant la formation. Tu fais rien de tout ça aujourd'hui — c'est juste pour que tu vois ce qui t'attend.</p>
-    
-</div>
-</section>
-
-<section data-s="40" class="py-12">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="grid sm:grid-cols-2 gap-4">
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">🌐</div>
-            <div class="font-bold mb-1">Sites web</div>
-            <p class="text-sol-gray text-xs">Sites vitrine, landing pages, blogs WordPress. On fait ça en séance 8.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">📝</div>
-            <div class="font-bold mb-1">Blogs automatisés</div>
-            <p class="text-sol-gray text-xs">Des blogs qui publient du contenu SEO en masse. Séance 9.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">💬</div>
-            <div class="font-bold mb-1">Chatbots</div>
-            <p class="text-sol-gray text-xs">Des chats intégrés sur des sites qui répondent aux clients H24. Séance 18.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">🔍</div>
-            <div class="font-bold mb-1">Scripts de scraping</div>
-            <p class="text-sol-gray text-xs">Extraire des données de sites web, Google Maps, annuaires. Séance 14.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">📧</div>
-            <div class="font-bold mb-1">Assistants email</div>
-            <p class="text-sol-gray text-xs">Des IA connectées au CRM du client qui répondent aux mails. Séance 20.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">📞</div>
-            <div class="font-bold mb-1">Agents vocaux</div>
-            <p class="text-sol-gray text-xs">Des IA qui décrochent le téléphone et prennent rendez-vous. Séance 21.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">📊</div>
-            <div class="font-bold mb-1">Prospection</div>
-            <p class="text-sol-gray text-xs">Messages personnalisés à l'échelle, relances automatiques. Séance 15.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="text-2xl mb-3 emoji">⭐</div>
-            <div class="font-bold mb-1">Gestion d'avis Google</div>
-            <p class="text-sol-gray text-xs">Surveiller et répondre aux avis automatiquement. Séance 24.</p>
-        </div>
-    </div>
-    <p class="text-sol-gray text-sm mt-6">Tout ça, c'est Claude Code qui le construit. Tu donnes les instructions, il code.</p>
-</div>
-</section>
-
-<!-- ===== S30-34: Partie 7 — Les limites ===== -->
-<section data-s="41" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">7</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 7</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Les limites à connaître.</h2>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Les limites — soyons honnêtes.</h2>
     <p class="text-sol-gray text-lg leading-relaxed">Claude Code c'est puissant mais c'est pas magique. Voilà ce qu'il faut savoir.</p>
 </div>
 </section>
 
-<section data-s="42" class="py-8">
+<section data-s="33" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card-orange p-6 ch"><h4 class="font-bold mb-2">Il peut se tromper</h4><p class="text-sol-gray text-sm">Vérifie toujours le résultat. Parfois le code marche pas, parfois il fait pas exactement ce que tu voulais. C'est normal — tu corriges et tu avances.</p></div></div></section>
+
+<section data-s="34" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card-orange p-6 ch"><h4 class="font-bold mb-2">Il voit que ton dossier</h4><p class="text-sol-gray text-sm">Claude Code voit les fichiers du dossier où tu es. Si t'es dans le mauvais dossier, il voit pas ton projet.</p></div></div></section>
+
+<section data-s="35" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card-green p-6 ch"><h4 class="font-bold mb-2">L'astuce : découpe en petites étapes</h4><p class="text-sol-gray text-sm">Au lieu de "crée un site complet avec 10 pages", dis "crée la page d'accueil", puis "crée la page contact", etc. Plus c'est découpé, meilleur c'est.</p></div></div></section>
+
+<!-- ============================================================ -->
+<!-- CHAPITRE 9 : EXEMPLES CONCRETS -->
+<!-- ============================================================ -->
+
+<section data-s="36" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card-orange p-6 ch">
-        <h4 class="font-bold mb-2">Il peut se tromper</h4>
-        <p class="text-sol-gray text-sm">Vérifie toujours le résultat. Parfois le code marche pas, parfois il fait pas exactement ce que tu voulais. C'est normal — tu corriges et tu avances.</p>
-    </div>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Des exemples pour voir en vrai.</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">Voilà des instructions que tu pourrais donner à Claude Code. Pour que tu vois le genre de trucs qu'il sait faire.</p>
 </div>
 </section>
 
-<section data-s="43" class="py-8">
+<section data-s="37" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card p-5 ch"><div class="font-bold text-sm mb-2">Créer un site</div><div class="cmd mt-2">Crée un site vitrine en HTML + Tailwind pour un consultant IA. Design moderne, fond blanc, 4 sections : hero, services, témoignages, contact.</div></div></div></section>
+
+<section data-s="38" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card p-5 ch"><div class="font-bold text-sm mb-2">Scraper des données</div><div class="cmd mt-2">Écris un script qui scrape les 100 premiers résultats Google pour "cabinet comptable Lyon". Nom, site web, téléphone. Exporte en CSV.</div></div></div></section>
+
+<section data-s="39" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card p-5 ch"><div class="font-bold text-sm mb-2">Modifier un projet</div><div class="cmd mt-2">Lis tout le projet et ajoute un formulaire de contact qui envoie un email. Style cohérent avec le reste du site.</div></div></div></section>
+
+<section data-s="40" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card p-5 ch"><div class="font-bold text-sm mb-2">Générer du contenu</div><div class="cmd mt-2">Génère 10 articles de blog SEO sur "IA pour PME". 800 mots chacun, titre accrocheur, sous-titres, meta description. Un fichier par article.</div></div></div></section>
+
+<section data-s="41" class="py-8"><div class="max-w-3xl mx-auto px-4 sr"><div class="card p-5 ch"><div class="font-bold text-sm mb-2">Corriger un bug</div><div class="cmd mt-2">Le formulaire de contact envoie pas les emails. Regarde le code et corrige.</div></div></div></section>
+
+<!-- ============================================================ -->
+<!-- CHAPITRE 10 : LES AUTRES OUTILS -->
+<!-- ============================================================ -->
+
+<section data-s="42" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card-orange p-6 ch">
-        <h4 class="font-bold mb-2">Il voit que ton dossier</h4>
-        <p class="text-sol-gray text-sm">Claude Code voit les fichiers du dossier où tu es. Si t'es dans le mauvais dossier, il voit pas ton projet. Pense à te placer au bon endroit avant de lancer.</p>
-    </div>
+    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Et les autres outils ?</h2>
+    <p class="text-sol-gray text-lg leading-relaxed">Pendant la formation tu vas utiliser 4 outils. Claude Code c'est le principal. Voilà comment ils se complètent.</p>
 </div>
 </section>
 
-<section data-s="44" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card-orange p-6 ch">
-        <h4 class="font-bold mb-2">Ça coûte des tokens</h4>
-        <p class="text-sol-gray text-sm">Chaque échange consomme des tokens (= de l'argent). Les conversations longues coûtent plus cher. Utilise <span class="code-inline">/cost</span> pour surveiller et <span class="code-inline">/compact</span> pour compresser quand ça devient long.</p>
-    </div>
-</div>
-</section>
-
-<section data-s="45" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card-green p-6 ch">
-        <h4 class="font-bold mb-2">L'astuce : découpe en petites étapes</h4>
-        <p class="text-sol-gray text-sm">Au lieu de dire "crée-moi un site complet avec 10 pages", dis "crée la page d'accueil", puis "maintenant crée la page contact", etc. Plus c'est découpé, meilleur c'est le résultat.</p>
-    </div>
-</div>
-</section>
-
-<!-- ===== S35-40: Partie 8 — Les autres outils ===== -->
-<section data-s="46" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="flex items-center gap-3 mb-6">
-        <div class="step bg-sol-accent/10 border-sol-accent text-sol-accent">8</div>
-        <span class="font-mono text-xs text-sol-gray uppercase">Partie 8</span>
-    </div>
-    <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">Claude Code vs les autres outils.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed">Pendant la formation, tu vas utiliser 4 outils. Voilà quand utiliser lequel.</p>
-</div>
-</section>
-
-<section data-s="47" class="py-12">
+<section data-s="43" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="space-y-4">
-        <div class="card-accent p-5 ch">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-accent text-sol-accent text-xs">Claude Code</span>
-                <span class="text-sol-gray text-sm">→ Quand tu <strong>construis</strong></span>
-            </div>
-            <p class="text-sol-gray text-xs">Sites, chatbots, scripts, scraping, prospection. C'est ton outil principal.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-gray text-sol-gray text-xs">Codex</span>
-                <span class="text-sol-gray text-sm">→ Quand tu <strong>délègues</strong> un projet entier</span>
-            </div>
-            <p class="text-sol-gray text-xs">Tu lances Codex sur un projet, tu pars faire autre chose, tu reviens au résultat. Séance 2.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-cyan text-sol-accent text-xs">n8n</span>
-                <span class="text-sol-gray text-sm">→ Quand tu <strong>automatises une boucle</strong></span>
-            </div>
-            <p class="text-sol-gray text-xs">Relances emails, notifications, flux de données entre outils. Séance 3.</p>
-        </div>
-        <div class="card p-5 ch">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-navy text-sol-navy text-xs">Cowork</span>
-                <span class="text-sol-gray text-sm">→ Quand tu <strong>analyses</strong> ou <strong>produis des documents</strong></span>
-            </div>
-            <p class="text-sol-gray text-xs">Études de marché, rapports, propositions commerciales, présentations. Séance 4.</p>
-        </div>
+        <div class="card-accent p-5 ch"><div class="flex items-center gap-3 mb-2"><span class="tb border-sol-accent text-sol-accent text-xs">Claude Code</span><span class="text-sol-gray text-sm">→ Tu <strong>construis</strong></span></div><p class="text-sol-gray text-xs">Sites, chatbots, scripts, scraping, prospection. Ton outil principal.</p></div>
+        <div class="card p-5 ch"><div class="flex items-center gap-3 mb-2"><span class="tb border-sol-gray text-sol-gray text-xs">Codex</span><span class="text-sol-gray text-sm">→ Tu <strong>délègues</strong> un projet entier</span></div><p class="text-sol-gray text-xs">Tu lances, tu pars, tu reviens au résultat. Séance 2.</p></div>
+        <div class="card p-5 ch"><div class="flex items-center gap-3 mb-2"><span class="tb border-sol-accent text-sol-accent text-xs">n8n</span><span class="text-sol-gray text-sm">→ Tu <strong>automatises</strong> une boucle</span></div><p class="text-sol-gray text-xs">Relances emails, notifications, flux de données. Séance 3.</p></div>
+        <div class="card p-5 ch"><div class="flex items-center gap-3 mb-2"><span class="tb border-sol-navy text-sol-navy text-xs">Cowork</span><span class="text-sol-gray text-sm">→ Tu <strong>analyses</strong> et <strong>produis des documents</strong></span></div><p class="text-sol-gray text-xs">Études de marché, rapports, propositions. Séance 4.</p></div>
     </div>
 </div>
 </section>
 
-<section data-s="48" class="py-12">
+<section data-s="44" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-4">En résumé</h3>
     <div class="overflow-x-auto">
     <table class="w-full text-sm text-left">
-        <thead><tr class="border-b-2 border-sol-black"><th class="py-3 px-3 font-mono text-xs text-sol-gray">JE VEUX...</th><th class="py-3 px-3 font-mono text-xs text-sol-gray">J'UTILISE</th></tr></thead>
+        <thead><tr class="border-b-2 border-sol-deep"><th class="py-3 px-3 font-mono text-xs text-sol-gray">JE VEUX...</th><th class="py-3 px-3 font-mono text-xs text-sol-gray">J'UTILISE</th></tr></thead>
         <tbody>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Créer un site web</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">Claude Code</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Scraper des données</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">Claude Code</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Coder un gros projet en autonomie</td><td class="py-3 px-3 font-mono text-xs">Codex</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Envoyer des emails automatiques</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">n8n</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Analyser des concurrents</td><td class="py-3 px-3 text-sol-navy font-mono text-xs">Cowork</td></tr>
-            <tr><td class="py-3 px-3">Créer une proposition commerciale</td><td class="py-3 px-3 text-sol-navy font-mono text-xs">Cowork</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Créer un site web</td><td class="py-3 px-3 font-mono text-xs" style="color:#4CC0C0">Claude Code</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Scraper des données</td><td class="py-3 px-3 font-mono text-xs" style="color:#4CC0C0">Claude Code</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Coder un gros projet en autonomie</td><td class="py-3 px-3 font-mono text-xs text-sol-gray">Codex</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Envoyer des emails auto</td><td class="py-3 px-3 font-mono text-xs" style="color:#4CC0C0">n8n</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Analyser des concurrents</td><td class="py-3 px-3 font-mono text-xs text-sol-navy">Cowork</td></tr>
+            <tr><td class="py-3 px-3">Créer une proposition commerciale</td><td class="py-3 px-3 font-mono text-xs text-sol-navy">Cowork</td></tr>
         </tbody>
     </table>
     </div>
-    <p class="text-sol-gray text-sm mt-4">T'inquiète pas de tout retenir maintenant. On voit chaque outil en détail dans les prochaines séances.</p>
+    <p class="text-sol-gray text-sm mt-4 italic">T'inquiète pas de tout retenir. On voit chaque outil dans les prochaines séances.</p>
 </div>
 </section>
 
-<!-- ===== S38-50: Récaps + exemples + conclusion ===== -->
-<section data-s="49" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr text-center">
-    <div class="inline-block p-0.5 gradient-bg mb-4"><div class="px-6 py-2 bg-white font-mono text-sm font-bold">EXEMPLES CONCRETS</div></div>
-    <h2 class="font-space font-bold text-3xl mb-4">Des exemples pour bien comprendre.</h2>
-    <p class="text-sol-gray max-w-xl mx-auto">Voilà des vraies instructions que tu pourrais donner à Claude Code. Pour que tu vois le genre de choses qu'il sait faire.</p>
-</div>
-</section>
+<!-- ============================================================ -->
+<!-- CHAPITRE 11 : CE QU'IL FAUT RETENIR -->
+<!-- ============================================================ -->
 
-<section data-s="50" class="py-8">
+<section data-s="45" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-5 ch">
-        <div class="font-bold text-sm mb-2">Exemple 1 — Créer un site</div>
-        <div class="cmd mt-2">Crée un site vitrine en HTML + Tailwind pour un consultant IA. Design moderne, fond blanc, 4 sections : hero, services, témoignages, contact. Mobile-first.</div>
-        <p class="text-sol-gray text-xs mt-3">Claude Code crée tous les fichiers, le design, le responsive. En 5 minutes t'as un site.</p>
-    </div>
-</div>
-</section>
-
-<section data-s="51" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-5 ch">
-        <div class="font-bold text-sm mb-2">Exemple 2 — Scraper des données</div>
-        <div class="cmd mt-2">Écris un script Python qui scrape les 100 premiers résultats Google pour "cabinet comptable Lyon". Je veux le nom, le site web et le téléphone. Exporte en CSV.</div>
-        <p class="text-sol-gray text-xs mt-3">Claude Code écrit le script, l'exécute, et te sort le fichier CSV avec les données.</p>
-    </div>
-</div>
-</section>
-
-<section data-s="52" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-5 ch">
-        <div class="font-bold text-sm mb-2">Exemple 3 — Modifier un projet existant</div>
-        <div class="cmd mt-2">Lis tout le projet et ajoute un formulaire de contact qui envoie un email quand quelqu'un le remplit. Utilise un style cohérent avec le reste du site.</div>
-        <p class="text-sol-gray text-xs mt-3">Claude Code lit les fichiers existants, comprend le style, et ajoute le formulaire qui matche.</p>
-    </div>
-</div>
-</section>
-
-<section data-s="53" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-5 ch">
-        <div class="font-bold text-sm mb-2">Exemple 4 — Générer du contenu</div>
-        <div class="cmd mt-2">Génère 10 articles de blog SEO sur le thème "IA pour PME". Chaque article fait 800 mots, avec un titre accrocheur, des sous-titres, et une meta description. Sauvegarde chaque article dans un fichier séparé.</div>
-        <p class="text-sol-gray text-xs mt-3">Claude Code crée 10 fichiers, chacun avec un article complet, structuré, optimisé SEO.</p>
-    </div>
-</div>
-</section>
-
-<section data-s="54" class="py-8">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <div class="card p-5 ch">
-        <div class="font-bold text-sm mb-2">Exemple 5 — Corriger un bug</div>
-        <div class="cmd mt-2">Le formulaire de contact envoie pas les emails. Regarde le code et corrige le problème.</div>
-        <p class="text-sol-gray text-xs mt-3">Claude Code lit le code, trouve le bug, le corrige, et t'explique ce qu'il a changé.</p>
-    </div>
-</div>
-</section>
-
-<!-- ===== S44: Ce qu'il faut retenir ===== -->
-<section data-s="55" class="py-20">
-<div class="max-w-3xl mx-auto px-4 sr">
-    <h2 class="font-space font-bold text-3xl mb-6">Ce qu'il faut retenir de cette séance.</h2>
+    <h2 class="font-space font-bold text-3xl mb-6">Ce qu'il faut retenir.</h2>
     <div class="space-y-3">
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Claude Code c'est pas un chatbot — c'est un agent qui agit sur ton ordinateur</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Tu l'installes en 5 minutes avec <span class="code-inline">curl -fsSL https://claude.ai/install.sh | bash</span></span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Tu lui parles en français, il comprend et il exécute</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Sois précis, donne du contexte, itère</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Le fichier CLAUDE.md c'est le briefing permanent du projet</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Les commandes clés : <span class="code-inline">/help</span> <span class="code-inline">/clear</span> <span class="code-inline">/cost</span> <span class="code-inline">/compact</span> <span class="code-inline">/init</span></span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Il peut se tromper — vérifie toujours, découpe en petites étapes</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">C'est ton outil principal — tu l'utilises dans 13 séances sur 24</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Claude Code c'est pas un chatbot — c'est un agent qui agit sur ton ordi</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Tu l'installes en 5 min avec une seule commande</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">L'abonnement Pro à 20€/mois suffit pour commencer</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Tu lui parles en français, il comprend et exécute</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Sois précis, donne du contexte, itère</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Le CLAUDE.md c'est le briefing permanent</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Commandes clés : /help /clear /cost /compact /init</span></div>
+        <div class="flex items-center gap-3"><span style="color:#4CC0C0" class="text-lg">✓</span><span class="text-sol-gray">Il peut se tromper — vérifie et découpe en étapes</span></div>
     </div>
 </div>
 </section>
 
-<!-- ===== S45: Cheatsheet ===== -->
-<section data-s="56" class="py-16">
+<!-- Cheatsheet -->
+<section data-s="46" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-2xl mb-6">Cheatsheet — garde ça sous la main.</h2>
     <div class="code border-sol-accent">
-        <div class="text-sol-accent mb-3 font-bold">// Claude Code — Cheatsheet</div>
+        <div style="color:#4CC0C0" class="mb-3 font-bold">// Claude Code — Cheatsheet</div>
         <div class="text-gray-400 space-y-2">
             <p>INSTALLER</p>
             <p>  Mac/Linux : curl -fsSL https://claude.ai/install.sh | bash</p>
@@ -1354,98 +789,81 @@ Dialogue → tu parles en français, il comprend
             <p>  claude --version</p>
             <p>  claude</p>
             <p></p>
+            <p>ABONNEMENT</p>
+            <p>  Pro 20€/mois (recommandé)</p>
+            <p>  Max 5x 100€/mois · Max 20x 200€/mois</p>
+            <p></p>
             <p>COMMANDES</p>
-            <p>  /help      → toutes les commandes</p>
-            <p>  /clear     → repartir de zéro</p>
-            <p>  /cost      → voir le coût</p>
-            <p>  /compact   → compresser la conversation</p>
-            <p>  /init      → créer un CLAUDE.md auto</p>
+            <p>  /help /clear /cost /compact /init</p>
             <p></p>
             <p>FICHIERS</p>
-            <p>  "Lis le fichier X"</p>
-            <p>  "Modifie X dans le fichier Y"</p>
-            <p>  "Crée un fichier Z"</p>
-            <p>  "Montre la structure du projet"</p>
+            <p>  "Lis..." "Modifie..." "Crée..." "Montre la structure"</p>
             <p></p>
             <p>BONNES PRATIQUES</p>
-            <p>  → Sois précis dans tes instructions</p>
-            <p>  → Donne du contexte (pour qui, pour quoi)</p>
-            <p>  → Itère : décris → vérifie → ajuste</p>
-            <p>  → Découpe en petites étapes</p>
+            <p>  → Sois précis</p>
+            <p>  → Donne du contexte</p>
+            <p>  → Itère</p>
+            <p>  → Découpe en étapes</p>
             <p>  → Utilise un CLAUDE.md</p>
         </div>
     </div>
 </div>
 </section>
 
-<!-- ===== S46-48: La suite ===== -->
-<section data-s="57" class="py-16">
+<!-- ============================================================ -->
+<!-- CHAPITRE 12 : LA SUITE -->
+<!-- ============================================================ -->
+
+<section data-s="47" class="py-16">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-2xl mb-4">La suite</h2>
     <p class="text-sol-gray leading-relaxed mb-6">Maintenant que tu connais Claude Code, on passe aux autres outils :</p>
     <div class="space-y-3">
-        <div class="card-light p-4">
-            <div class="flex items-center justify-between">
-                <div><span class="font-bold text-sm">Séance 2</span><p class="text-sol-gray text-xs mt-1">Codex — l'agent qui code en autonomie</p></div>
-                <span class="tag border-sol-gray text-sol-gray text-xs">Prochaine</span>
-            </div>
-        </div>
-        <div class="card-light p-4">
-            <div class="flex items-center justify-between">
-                <div><span class="font-bold text-sm">Séance 3</span><p class="text-sol-gray text-xs mt-1">n8n — l'automatisation de flux</p></div>
-                <span class="text-sol-gray text-xs font-mono">Bientôt</span>
-            </div>
-        </div>
-        <div class="card-light p-4">
-            <div class="flex items-center justify-between">
-                <div><span class="font-bold text-sm">Séance 4</span><p class="text-sol-gray text-xs mt-1">Claude Cowork — l'analyse et les documents</p></div>
-                <span class="text-sol-gray text-xs font-mono">Bientôt</span>
-            </div>
-        </div>
+        <div class="card-light p-4"><div class="flex items-center justify-between"><div><span class="font-bold text-sm">Séance 2</span><p class="text-sol-gray text-xs mt-1">Codex — l'agent qui code en autonomie</p></div><span class="tag border-sol-accent text-sol-accent text-xs">Prochaine</span></div></div>
+        <div class="card-light p-4"><div class="flex items-center justify-between"><div><span class="font-bold text-sm">Séance 3</span><p class="text-sol-gray text-xs mt-1">n8n — l'automatisation de flux</p></div><span class="text-sol-gray text-xs font-mono">Bientôt</span></div></div>
+        <div class="card-light p-4"><div class="flex items-center justify-between"><div><span class="font-bold text-sm">Séance 4</span><p class="text-sol-gray text-xs mt-1">Claude Cowork — l'analyse et les documents</p></div><span class="text-sol-gray text-xs font-mono">Bientôt</span></div></div>
     </div>
 </div>
 </section>
 
-<section data-s="58" class="py-12">
+<section data-s="48" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card-accent p-6">
         <h3 class="font-bold text-lg mb-3">Un truc à faire avant la prochaine séance</h3>
-        <p class="text-sol-gray text-sm leading-relaxed">Installe Claude Code et joue avec. Demande-lui de créer un truc simple — un fichier HTML, un petit script, n'importe quoi. Le but c'est de te familiariser avec le dialogue. Plus tu pratiques, plus tu seras à l'aise pour la suite.</p>
+        <p class="text-sol-gray text-sm leading-relaxed">Installe Claude Code et joue avec. Demande-lui de créer un truc simple — un fichier HTML, un petit script, n'importe quoi. Le but c'est de te familiariser avec le dialogue. Plus tu pratiques, plus tu seras à l'aise.</p>
     </div>
 </div>
 </section>
 
-<section data-s="59" class="py-16">
+<section data-s="49" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="card p-6">
         <h4 class="font-bold mb-3">Si t'es bloqué</h4>
         <div class="text-sol-gray text-sm space-y-2">
             <p>→ Regarde la vidéo de cette séance</p>
             <p>→ Relis cette présentation</p>
-            <p>→ Pose ta question sur le Slack de la formation</p>
-            <p>→ Clone le repo <span class="code-inline">denem-claude-code</span> pour voir des exemples</p>
+            <p>→ Pose ta question sur le Slack</p>
+            <p>→ Clone le repo <span class="code-inline">denem-claude-code</span> pour des exemples</p>
         </div>
     </div>
 </div>
 </section>
 
-<!-- ===== S49-50: Fin ===== -->
-<section data-s="60" class="py-20">
+<section data-s="50" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr text-center">
     <h2 class="font-space font-bold text-3xl sm:text-4xl mb-4">Fin de la séance 1.</h2>
-    <p class="text-sol-gray text-lg mb-2">Tu sais ce que c'est, comment l'installer, comment t'en servir.</p>
+    <p class="text-sol-gray text-lg mb-2">Tu sais ce que c'est, combien ça coûte, comment l'installer, comment t'en servir.</p>
     <p class="text-sol-gray">On se retrouve en séance 2 pour Codex.</p>
 </div>
 </section>
 
-<section data-s="61" class="py-12">
+<section data-s="51" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr text-center">
     <div class="inline-block p-1 gradient-bg"><div class="px-8 py-4 bg-white"><span class="font-space font-bold text-xl gradient-text">DENEM Academy</span></div></div>
     <p class="text-sol-gray text-xs mt-6 font-mono">Séance 1 — Claude Code — Acte 1 : Maîtriser</p>
 </div>
 </section>
 
-<!-- Footer -->
 <div class="py-16"></div>
 <footer class="py-8 border-t border-sol-lightgray">
 <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
@@ -1456,6 +874,7 @@ Dialogue → tu parles en français, il comprend
     <span class="text-xs text-sol-gray font-mono">Séance 01 / 24</span>
 </div>
 </footer>
+
 
 <!-- JS -->
 <script>
@@ -1479,7 +898,7 @@ document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-scale,.stagger-list,.revea
 // Section counter
 // ==========================================
 const allS=document.querySelectorAll('[data-s]'),sc=document.getElementById('sc');
-const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){sc.textContent=x.target.dataset.s+' / 61';sc.style.transform='scale(1.1)';setTimeout(()=>sc.style.transform='scale(1)',200)}})},{threshold:.3});
+const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){sc.textContent=x.target.dataset.s+' / 51';sc.style.transform='scale(1.1)';setTimeout(()=>sc.style.transform='scale(1)',200)}})},{threshold:.3});
 allS.forEach(s=>sco.observe(s));
 
 // ==========================================
