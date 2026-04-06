@@ -116,8 +116,12 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 /* Code blocks */
 .code{background:#1F0A32;color:#e8edf2;border-left:4px solid #4CC0C0;padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.8;border-radius:6px;transition:all .3s ease}.code:hover{box-shadow:rgba(76,192,192,.1) 0px 8px 25px}
 .code-inline{background:#f4f7fa;color:#272B5C;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:.82rem;border-radius:4px;border:1px solid #e8edf2;transition:all .2s ease}.code-inline:hover{background:#edf1f6;border-color:#4CC0C0}
-.cmd{background:#1F0A32;color:#30D9DE;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px;transition:all .3s ease;cursor:default}.cmd:hover{transform:translateX(4px);box-shadow:rgba(76,192,192,.1) 0px 4px 15px}
+.cmd{background:#1F0A32;color:#30D9DE;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px;transition:all .3s ease;cursor:pointer;position:relative;user-select:all}.cmd:hover{transform:translateX(4px);box-shadow:rgba(76,192,192,.15) 0px 4px 15px;border:1px solid rgba(76,192,192,.3)}.cmd:active{transform:scale(.98)}
 .cmd::before{content:'$';color:#64748d}
+.cmd::after{content:'cliquer pour copier';position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.6rem;color:#64748d;opacity:.5;transition:all .3s ease;pointer-events:none}
+.cmd:hover::after{opacity:1;color:#4CC0C0}
+.cmd.copied::after{content:'copié !';color:#30D9DE;opacity:1;font-weight:600}
+.cmd.copied{box-shadow:0 0 0 2px rgba(76,192,192,.3),rgba(76,192,192,.15) 0px 4px 15px}
 
 /* Cards */
 .card{background:#fff;border:1px solid #e8edf2;border-radius:8px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px,rgba(0,0,0,.03) 0px 1px 3px;transition:all .35s ease}
@@ -1105,14 +1109,23 @@ document.querySelectorAll('.terminal').forEach(t=>{
 // Cmd copy to clipboard on click
 // ==========================================
 document.querySelectorAll('.cmd').forEach(cmd=>{
-    cmd.style.cursor='pointer';
-    cmd.title='Clique pour copier';
     cmd.addEventListener('click',()=>{
-        const text=cmd.textContent.replace('$','').trim();
+        const text=cmd.textContent.replace('$','').replace('cliquer pour copier','').replace('copié !','').trim();
         navigator.clipboard.writeText(text);
-        const orig=cmd.style.borderColor;
-        cmd.style.borderColor='#4CC0C0';cmd.style.boxShadow='0 0 0 3px rgba(76,192,192,.2)';
-        setTimeout(()=>{cmd.style.borderColor=orig;cmd.style.boxShadow=''},800);
+        cmd.classList.add('copied');
+        setTimeout(()=>cmd.classList.remove('copied'),1500);
+    });
+});
+
+// Aussi rendre les code-inline copiables
+document.querySelectorAll('.code-inline').forEach(ci=>{
+    ci.style.cursor='pointer';
+    ci.title='Clique pour copier';
+    ci.addEventListener('click',()=>{
+        navigator.clipboard.writeText(ci.textContent.trim());
+        const orig=ci.style.background;
+        ci.style.background='#4CC0C0';ci.style.color='#fff';
+        setTimeout(()=>{ci.style.background=orig;ci.style.color=''},600);
     });
 });
 
