@@ -343,7 +343,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <section data-s="10" class="py-20">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-3xl sm:text-4xl mb-6">On installe ensemble.</h2>
-    <p class="text-sol-gray text-lg leading-relaxed">Ok, maintenant tu sais ce que c'est et combien ça coûte. On passe à l'action. 4 étapes, 5 minutes, et c'est prêt.</p>
+    <p class="text-sol-gray text-lg leading-relaxed">Ok, maintenant tu sais ce que c'est et combien ça coûte. On passe à l'action. 5 étapes. On va tout faire ensemble, pas à pas. Prends ton temps, y'a pas de rush.</p>
 </div>
 </section>
 
@@ -351,24 +351,26 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <section data-s="11" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-2">Étape 1 — Ouvre ton terminal</h3>
-    <p class="text-sol-gray text-sm mb-4">Le terminal c'est une fenêtre où tu tapes des commandes. C'est là que Claude Code vit.</p>
+    <p class="text-sol-gray text-sm mb-4">Le terminal c'est une fenêtre où tu tapes des commandes. C'est pas un truc de hacker — c'est juste une fenêtre avec du texte. C'est là que Claude Code vit.</p>
     <div class="grid sm:grid-cols-2 gap-3">
         <div class="card-light p-5 ch">
             <div class="text-2xl mb-2 emoji">🍎</div>
             <div class="font-bold text-sm mb-2">Sur Mac</div>
             <div class="text-sol-gray text-xs space-y-2">
-                <p>1. <span class="code-inline">Cmd + Espace</span> (Spotlight)</p>
-                <p>2. Tape <span class="code-inline">Terminal</span></p>
-                <p>3. Entrée</p>
+                <p>1. Appuie sur <span class="code-inline">Cmd + Espace</span> (ça ouvre Spotlight)</p>
+                <p>2. Tape le mot <span class="code-inline">Terminal</span></p>
+                <p>3. Appuie sur Entrée</p>
+                <p>4. Une fenêtre s'ouvre. C'est ton terminal.</p>
             </div>
         </div>
         <div class="card-light p-5 ch">
             <div class="text-2xl mb-2 emoji">🪟</div>
             <div class="font-bold text-sm mb-2">Sur Windows</div>
             <div class="text-sol-gray text-xs space-y-2">
-                <p>1. Touche <span class="code-inline">Windows</span></p>
+                <p>1. Appuie sur la touche <span class="code-inline">Windows</span></p>
                 <p>2. Tape <span class="code-inline">PowerShell</span></p>
-                <p>3. Clic droit → Exécuter en admin</p>
+                <p>3. Clic droit → <strong>"Exécuter en administrateur"</strong></p>
+                <p>4. Clique "Oui". Ton terminal est ouvert.</p>
             </div>
         </div>
     </div>
@@ -376,49 +378,93 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 </div>
 </section>
 
-<!-- Étape 2 : Installer -->
+<!-- Étape 2 : Node.js -->
 <section data-s="12" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-2">Étape 2 — Installer Claude Code</h3>
-    <p class="text-sol-gray text-sm mb-4">Une seule commande. Tu as besoin de Node.js (va sur nodejs.org si tu l'as pas).</p>
-    <div class="grid sm:grid-cols-2 gap-4 mb-4">
-        <div class="card-accent p-5 ch">
+    <h3 class="font-space font-bold text-xl mb-2">Étape 2 — Installer Node.js</h3>
+    <p class="text-sol-gray text-sm mb-4">Claude Code a besoin de Node.js pour fonctionner. C'est un peu comme le moteur d'une voiture — sans lui, Claude Code peut pas démarrer. L'installation prend 2 minutes.</p>
+
+    <div class="card-accent p-5 mb-4">
+        <div class="font-bold text-sm mb-2">D'abord, vérifie si tu l'as déjà</div>
+        <p class="text-sol-gray text-xs mb-3">Tape ça dans ton terminal :</p>
+        <div class="cmd">node --version</div>
+        <p class="text-sol-gray text-xs mt-3">→ Tu vois un numéro (genre <span class="code-inline">v20.11.0</span>) ? C'est bon, tu l'as déjà. Passe à l'étape 3.</p>
+        <p class="text-sol-gray text-xs mt-1">→ Tu vois <span class="code-inline">command not found</span> ? C'est qu'il faut l'installer. Suis les instructions en dessous.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-3">
+        <div class="card-light p-5 ch">
             <div class="text-2xl mb-2 emoji">🍎</div>
-            <div class="font-bold text-sm mb-3">Toutes plateformes (Mac, Windows, Linux)</div>
-            <div class="cmd">npm install -g @anthropic-ai/claude-code</div>
+            <div class="font-bold text-sm mb-2">Installer sur Mac</div>
+            <div class="text-sol-gray text-xs space-y-2">
+                <p>1. Va sur <span class="code-inline">nodejs.org</span></p>
+                <p>2. Clique sur le gros bouton vert <strong>"Download"</strong></p>
+                <p>3. Un fichier <span class="code-inline">.pkg</span> se télécharge</p>
+                <p>4. Double-clique dessus</p>
+                <p>5. Clique "Continuer" → "Continuer" → "Installer"</p>
+                <p>6. Tape ton mot de passe Mac si demandé</p>
+                <p>7. C'est installé.</p>
+            </div>
         </div>
+        <div class="card-light p-5 ch">
+            <div class="text-2xl mb-2 emoji">🪟</div>
+            <div class="font-bold text-sm mb-2">Installer sur Windows</div>
+            <div class="text-sol-gray text-xs space-y-2">
+                <p>1. Va sur <span class="code-inline">nodejs.org</span></p>
+                <p>2. Clique sur le gros bouton vert <strong>"Download"</strong></p>
+                <p>3. Un fichier <span class="code-inline">.msi</span> se télécharge</p>
+                <p>4. Double-clique dessus</p>
+                <p>5. Clique "Next" → "Next" → "Install"</p>
+                <p>6. Clique "Finish"</p>
+                <p>7. C'est installé.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-orange p-4 mt-4">
+        <div class="font-bold text-sm mb-2">Important</div>
+        <p class="text-sol-gray text-xs"><strong>Ferme ton terminal et rouvre-le</strong> après l'installation. Sinon il voit pas que Node.js est là. Puis retape <span class="code-inline">node --version</span> pour vérifier.</p>
     </div>
 </div>
 </section>
 
-<section data-s="13" class="py-8">
+<!-- Étape 3 : Installer Claude Code -->
+<section data-s="13" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <p class="text-sol-gray text-sm mb-4">Du texte va défiler. C'est normal. Voilà ce que tu vois :</p>
+    <h3 class="font-space font-bold text-xl mb-2">Étape 3 — Installer Claude Code</h3>
+    <p class="text-sol-gray text-sm mb-4">Maintenant que Node.js est là, une seule commande suffit :</p>
+    <div class="cmd text-lg">npm install -g @anthropic-ai/claude-code</div>
+    <p class="text-sol-gray text-sm mt-4 mb-4">Ça va mouliner 5-10 secondes. Du texte défile. C'est normal. Voilà ce que tu vois :</p>
     <div class="terminal">
         <div class="terminal-bar"><div class="terminal-dot" style="background:#ff5f57"></div><div class="terminal-dot" style="background:#febc2e"></div><div class="terminal-dot" style="background:#28c840"></div><span class="text-gray-500 text-xs ml-2 font-mono">Terminal</span></div>
         <div class="terminal-body">
             <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">npm install -g @anthropic-ai/claude-code</span></p>
             <p class="terminal-output mt-2">added 3 packages in 5s</p>
             <p class="terminal-output">2 packages are looking for funding</p>
-            <p class="terminal-output mt-2">✓ <span style="color:#30D9DE">Claude Code installed successfully!</span></p>
         </div>
     </div>
-    <!-- Screenshot -->
-    <div class="card p-3 mt-4" style="overflow:hidden">
-        <img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/0.png" alt="Claude Code après installation" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy">
-        <p class="text-sol-gray text-xs mt-2 text-center italic">Après l'installation — Claude Code te demande de choisir ton style</p>
+    <p class="text-sol-gray text-sm mt-4 mb-2">Pour vérifier que c'est installé :</p>
+    <div class="cmd">claude --version</div>
+    <p class="text-sol-gray text-xs mt-3">Tu vois un numéro ? C'est bon, Claude Code est sur ton ordinateur.</p>
+
+    <div class="card-light p-4 mt-4">
+        <div class="font-bold text-sm mb-2 text-sol-orange">Si tu vois "permission denied" (Mac)</div>
+        <p class="text-sol-gray text-xs">Tape la commande avec <span class="code-inline">sudo</span> devant :</p>
+        <div class="cmd mt-2">sudo npm install -g @anthropic-ai/claude-code</div>
+        <p class="text-sol-gray text-xs mt-2">Il te demande ton mot de passe Mac. Tu le tapes (tu vois rien s'afficher, c'est normal) et Entrée.</p>
     </div>
-    <div class="card-green p-4 mt-4">
-        <div class="font-bold text-sm mb-2">Méthode alternative (npm)</div>
-        <p class="text-sol-gray text-xs">Si tu préfères passer par npm (faut avoir Node.js) : <span class="code-inline">npm install -g @anthropic-ai/claude-code</span></p>
+
+    <div class="card-light p-4 mt-3">
+        <div class="font-bold text-sm mb-2 text-sol-orange">Si tu vois "npm not found"</div>
+        <p class="text-sol-gray text-xs">Node.js est pas installé. Retourne à l'étape 2. Et pense à fermer/rouvrir le terminal après l'installation de Node.js.</p>
     </div>
 </div>
 </section>
 
-<!-- Étape 3 : Compte -->
+<!-- Étape 4 : Compte -->
 <section data-s="14" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-2">Étape 3 — Prends ton abonnement Pro</h3>
+    <h3 class="font-space font-bold text-xl mb-2">Étape 4 — Prends ton abonnement Pro</h3>
     <p class="text-sol-gray text-sm mb-4">Va sur <span class="code-inline">claude.ai</span>, crée un compte, et prends l'abonnement Pro à 20€/mois.</p>
     <div class="space-y-3">
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">1</div><div><p class="text-sol-gray text-sm">Va sur <span class="code-inline">claude.ai</span></p></div></div>
@@ -436,7 +482,7 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <!-- Étape 4 : Lancer -->
 <section data-s="15" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
-    <h3 class="font-space font-bold text-xl mb-2">Étape 4 — Premier lancement</h3>
+    <h3 class="font-space font-bold text-xl mb-2">Étape 5 — Premier lancement</h3>
     <p class="text-sol-gray text-sm mb-4">Le grand moment. Tape :</p>
     <div class="cmd text-lg">claude</div>
     <div class="card p-3 mt-4" style="overflow:hidden"><img src="https://www.bannerbear.com/images/ghost/2026-01-21-how-to-install-claude-code-terminal-ide-web-desktop-setup/1.png" alt="Login" class="w-full rounded" style="border:1px solid #e8edf2" loading="lazy"><p class="text-sol-gray text-xs mt-2 text-center italic">Claude Code te demande de te connecter</p></div>
@@ -455,20 +501,24 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
 <section data-s="16" class="py-12">
 <div class="max-w-3xl mx-auto px-4 sr">
     <div class="code border-sol-accent">
-        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — 4 étapes</div>
+        <div style="color:#4CC0C0" class="mb-3 font-bold">// Récap — 5 étapes</div>
         <div class="text-gray-400">
             1. Ouvrir le terminal<br>
-            2. npm install -g @anthropic-ai/claude-code<br>
-            3. Prendre l'abonnement Pro sur claude.ai<br>
-            4. Taper "claude" et se connecter
+            2. Installer Node.js (nodejs.org → télécharger → installer)<br>
+            3. npm install -g @anthropic-ai/claude-code<br>
+            4. Prendre l'abonnement Pro sur claude.ai<br>
+            5. Taper "claude" et se connecter
         </div>
     </div>
     <div class="card-orange p-4 mt-4">
         <div class="font-bold text-sm mb-2">Si t'es bloqué</div>
         <div class="text-sol-gray text-xs space-y-1">
-            <p>→ <strong>"command not found: claude"</strong> — ferme et rouvre le terminal</p>
-            <p>→ <strong>"permission denied"</strong> — ajoute <span class="code-inline">sudo</span> devant la commande</p>
-            <p>→ <strong>Le navigateur s'ouvre pas</strong> — va manuellement sur le lien affiché</p>
+            <p>→ <strong>"command not found: node"</strong> — Node.js est pas installé. Va sur nodejs.org, installe, ferme et rouvre le terminal</p>
+            <p>→ <strong>"command not found: npm"</strong> — pareil, Node.js est pas installé ou le terminal a pas été rouvert</p>
+            <p>→ <strong>"command not found: claude"</strong> — ferme et rouvre le terminal après l'installation</p>
+            <p>→ <strong>"permission denied"</strong> — ajoute <span class="code-inline">sudo</span> devant la commande (Mac)</p>
+            <p>→ <strong>"EEXIST: file already exists"</strong> — Claude Code est déjà installé. Ajoute <span class="code-inline">--force</span> à la fin pour réinstaller</p>
+            <p>→ <strong>Le navigateur s'ouvre pas</strong> — va manuellement sur le lien affiché dans le terminal</p>
             <p>→ <strong>Autre</strong> — poste ta question sur le Slack avec un screenshot</p>
         </div>
     </div>
@@ -805,7 +855,8 @@ nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
         <div style="color:#4CC0C0" class="mb-3 font-bold">// Claude Code — Cheatsheet</div>
         <div class="text-gray-400 space-y-2">
             <p>INSTALLER</p>
-            <p>  npm install -g @anthropic-ai/claude-code</p>
+            <p>  1. Node.js → nodejs.org (télécharger + installer)</p>
+            <p>  2. npm install -g @anthropic-ai/claude-code</p>
             <p>  claude --version</p>
             <p>  claude</p>
             <p></p>
