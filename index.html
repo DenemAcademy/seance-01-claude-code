@@ -7,44 +7,44 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script>
-tailwind.config={theme:{extend:{fontFamily:{'space':['Space Grotesk','sans-serif'],'mono':['JetBrains Mono','monospace'],'inter':['Inter','sans-serif']},colors:{'sol':{'black':'#061b31','dark':'#273951','accent':'#533afd','red':'#ea2261','orange':'#f97316','yellow':'#f5c518','green':'#15be53','purple':'#533afd','pink':'#f96bee','gray':'#64748d','lightgray':'#e5edf5','bg':'#ffffff','muted':'#f6f9fc'}}}}}
+tailwind.config={theme:{extend:{fontFamily:{'space':['Space Grotesk','sans-serif'],'mono':['JetBrains Mono','monospace'],'inter':['Inter','sans-serif']},colors:{'sol':{'black':'#1F0A32','dark':'#272B5C','accent':'#4CC0C0','cyan':'#30D9DE','navy':'#272B5C','deep':'#1F0A32','green':'#4CC0C0','purple':'#272B5C','orange':'#f97316','gray':'#64748d','lightgray':'#e8edf2','bg':'#ffffff','muted':'#f4f7fa'}}}}}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-::selection{background:#533afd;color:#fff}
-body{background:#fff;color:#061b31;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.gradient-text{background:linear-gradient(135deg,#533afd,#f96bee,#ea2261);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gs 6s ease infinite}
-.gradient-bg{background:linear-gradient(135deg,#533afd,#665efd,#f96bee);background-size:200% 200%;animation:gs 8s ease infinite}
+::selection{background:#4CC0C0;color:#1F0A32}
+body{background:#fff;color:#1F0A32;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.gradient-text{background:linear-gradient(135deg,#272B5C,#4CC0C0,#30D9DE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gs 6s ease infinite}
+.gradient-bg{background:linear-gradient(135deg,#272B5C,#4CC0C0,#30D9DE);background-size:200% 200%;animation:gs 8s ease infinite}
 @keyframes gs{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .animate-float{animation:float 6s ease-in-out infinite}
 .sr{opacity:0;transform:translateY(16px);transition:all .7s cubic-bezier(.4,0,.2,1)}.sr.v{opacity:1;transform:translateY(0)}
 .s1{transition-delay:.1s}.s2{transition-delay:.2s}.s3{transition-delay:.3s}.s4{transition-delay:.4s}.s5{transition-delay:.5s}
-.ch{transition:all .3s cubic-bezier(.4,0,.2,1)}.ch:hover{transform:translateY(-4px);box-shadow:rgba(50,50,93,.2) 0px 13px 27px -5px,rgba(0,0,0,.08) 0px 8px 16px -8px}
+.ch{transition:all .3s cubic-bezier(.4,0,.2,1)}.ch:hover{transform:translateY(-4px);box-shadow:rgba(39,43,92,.15) 0px 13px 27px -5px,rgba(0,0,0,.06) 0px 8px 16px -8px}
 .tag{display:inline-block;padding:5px 14px;font-size:.7rem;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;border:1.5px solid;border-radius:4px}
 .tb{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;font-size:.72rem;font-weight:500;font-family:'JetBrains Mono',monospace;border:1.5px solid;border-radius:4px}
 .progress-bar{position:fixed;top:0;left:0;height:3px;z-index:9999;transition:width .1s}
 nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
-.code{background:#0d253d;color:#e5edf5;border-left:4px solid #533afd;padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.8;border-radius:6px}
-.code-inline{background:#f6f9fc;color:#533afd;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:.82rem;border-radius:4px;border:1px solid #e5edf5}
-.cmd{background:#0d253d;color:#15be53;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px}
+.code{background:#1F0A32;color:#e8edf2;border-left:4px solid #4CC0C0;padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.8;border-radius:6px}
+.code-inline{background:#f4f7fa;color:#272B5C;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:.82rem;border-radius:4px;border:1px solid #e8edf2}
+.cmd{background:#1F0A32;color:#30D9DE;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px}
 .cmd::before{content:'$';color:#64748d}
-.card{background:#fff;border:1px solid #e5edf5;border-radius:8px;box-shadow:rgba(50,50,93,.06) 0px 2px 5px,rgba(0,0,0,.03) 0px 1px 3px}
-.card-accent{background:#fff;border:1.5px solid #533afd;border-radius:8px;box-shadow:rgba(83,58,253,.06) 0px 4px 12px}
-.card-green{background:#fff;border:1.5px solid #15be53;border-radius:8px;box-shadow:rgba(21,190,83,.06) 0px 4px 12px}
+.card{background:#fff;border:1px solid #e8edf2;border-radius:8px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px,rgba(0,0,0,.03) 0px 1px 3px}
+.card-accent{background:#fff;border:1.5px solid #4CC0C0;border-radius:8px;box-shadow:rgba(76,192,192,.1) 0px 4px 12px}
+.card-green{background:#fff;border:1.5px solid #30D9DE;border-radius:8px;box-shadow:rgba(48,217,222,.1) 0px 4px 12px}
 .card-orange{background:#fff;border:1.5px solid #f97316;border-radius:8px;box-shadow:rgba(249,115,22,.06) 0px 4px 12px}
-.card-light{background:#fff;border:1px solid #e5edf5;border-radius:6px}
+.card-light{background:#fff;border:1px solid #e8edf2;border-radius:6px}
 .step{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;flex-shrink:0;border:1.5px solid;border-radius:50%}
-.sc{position:fixed;bottom:16px;right:16px;z-index:50;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#64748d;background:#fff;border:1px solid #e5edf5;padding:4px 10px;border-radius:4px;box-shadow:rgba(50,50,93,.06) 0px 2px 5px}
-.terminal{background:#0d253d;border-radius:8px;overflow:hidden}
-.terminal-bar{background:#1a3550;padding:8px 16px;display:flex;align-items:center;gap:6px}
+.sc{position:fixed;bottom:16px;right:16px;z-index:50;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#64748d;background:#fff;border:1px solid #e8edf2;padding:4px 10px;border-radius:4px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px}
+.terminal{background:#1F0A32;border-radius:8px;overflow:hidden}
+.terminal-bar{background:#272B5C;padding:8px 16px;display:flex;align-items:center;gap:6px}
 .terminal-dot{width:10px;height:10px;border-radius:50%}
-.terminal-body{padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.9;color:#e5edf5}
-.terminal-prompt{color:#15be53}
+.terminal-body{padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.9;color:#e8edf2}
+.terminal-prompt{color:#30D9DE}
 .terminal-cmd{color:#fff}
 .terminal-output{color:#94a3b8}
-.terminal-accent{color:#533afd}
-.emoji{filter:drop-shadow(1px 1px 0 rgba(50,50,93,.1))}
+.terminal-accent{color:#4CC0C0}
+.emoji{filter:drop-shadow(1px 1px 0 rgba(39,43,92,.1))}
 </style>
 </head>
 <body>
@@ -56,7 +56,7 @@ nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-sol-lightgray" style="box-shadow:rgba(50,50,93,.06) 0px 2px 5px">
 <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
     <div class="flex items-center gap-3">
-        <div class="w-7 h-7 bg-sol-accent flex items-center justify-center font-mono font-bold text-xs text-white rounded">D</div>
+        <div class="w-7 h-7 bg-sol-navy flex items-center justify-center font-mono font-bold text-xs text-white rounded">D</div>
         <span class="font-space font-bold text-sm">DENEM Academy</span>
         <span class="text-sol-gray text-xs">/</span>
         <span class="text-sol-gray text-xs font-mono">Séance 01</span>
@@ -311,7 +311,7 @@ nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
 <div class="max-w-3xl mx-auto px-4 sr">
     <h3 class="font-space font-bold text-xl mb-4">Les fichiers qu'il crée</h3>
     <p class="text-sol-gray leading-relaxed mb-4">Quand Claude Code crée des fichiers, ils apparaissent dans le dossier où tu es. Par exemple, si tu es dans <span class="code-inline">~/projets/mon-site</span>, les fichiers seront là.</p>
-    <div class="code border-sol-green">
+    <div class="code border-sol-cyan">
         <div style="color:#15be53" class="mb-2 font-bold">// Exemple de structure créée</div>
         <div class="text-gray-400">
 mon-site/<br>
@@ -361,7 +361,7 @@ mon-site/<br>
             <p class="text-sol-gray text-xs mt-2">Claude Code sait pas ce que tu veux. Il va faire un truc générique.</p>
         </div>
         <div class="card-green p-5">
-            <div class="font-bold text-sm mb-2 text-sol-green">Précis (bien)</div>
+            <div class="font-bold text-sm mb-2 text-sol-accent">Précis (bien)</div>
             <p class="text-sol-gray text-sm italic">"Crée un site vitrine pour un plombier à Lyon. Page d'accueil avec un hero, une section services avec 4 cartes, et un formulaire de contact."</p>
             <p class="text-sol-gray text-xs mt-2">Claude Code sait exactement quoi faire.</p>
         </div>
@@ -398,7 +398,7 @@ mon-site/<br>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">2</div><p class="text-sol-gray text-sm">Tu regardes le résultat</p></div>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">3</div><p class="text-sol-gray text-sm">Tu corriges : "change ça", "ajoute ça", "enlève ça"</p></div>
         <div class="flex items-start gap-4"><div class="step border-sol-accent text-sol-accent">4</div><p class="text-sol-gray text-sm">Tu re-regardes</p></div>
-        <div class="flex items-start gap-4"><div class="step border-sol-green text-sol-green">5</div><p class="text-sol-gray text-sm">Quand c'est bon, tu passes à la suite</p></div>
+        <div class="flex items-start gap-4"><div class="step border-sol-cyan text-sol-accent">5</div><p class="text-sol-gray text-sm">Quand c'est bon, tu passes à la suite</p></div>
     </div>
     <p class="text-sol-gray text-sm mt-4 italic">C'est comme travailler avec quelqu'un. Tu guides, il exécute, tu ajustes. Ça va vite.</p>
 </div>
@@ -678,14 +678,14 @@ Dialogue → tu parles en français, il comprend
         </div>
         <div class="card p-5 ch">
             <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-green text-sol-green text-xs">n8n</span>
+                <span class="tb border-sol-cyan text-sol-accent text-xs">n8n</span>
                 <span class="text-sol-gray text-sm">→ Quand tu <strong>automatises une boucle</strong></span>
             </div>
             <p class="text-sol-gray text-xs">Relances emails, notifications, flux de données entre outils. Séance 3.</p>
         </div>
         <div class="card p-5 ch">
             <div class="flex items-center gap-3 mb-2">
-                <span class="tb border-sol-purple text-sol-purple text-xs">Cowork</span>
+                <span class="tb border-sol-navy text-sol-navy text-xs">Cowork</span>
                 <span class="text-sol-gray text-sm">→ Quand tu <strong>analyses</strong> ou <strong>produis des documents</strong></span>
             </div>
             <p class="text-sol-gray text-xs">Études de marché, rapports, propositions commerciales, présentations. Séance 4.</p>
@@ -704,9 +704,9 @@ Dialogue → tu parles en français, il comprend
             <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Créer un site web</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">Claude Code</td></tr>
             <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Scraper des données</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">Claude Code</td></tr>
             <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Coder un gros projet en autonomie</td><td class="py-3 px-3 font-mono text-xs">Codex</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Envoyer des emails automatiques</td><td class="py-3 px-3 text-sol-green font-mono text-xs">n8n</td></tr>
-            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Analyser des concurrents</td><td class="py-3 px-3 text-sol-purple font-mono text-xs">Cowork</td></tr>
-            <tr><td class="py-3 px-3">Créer une proposition commerciale</td><td class="py-3 px-3 text-sol-purple font-mono text-xs">Cowork</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Envoyer des emails automatiques</td><td class="py-3 px-3 text-sol-accent font-mono text-xs">n8n</td></tr>
+            <tr class="border-b border-sol-lightgray"><td class="py-3 px-3">Analyser des concurrents</td><td class="py-3 px-3 text-sol-navy font-mono text-xs">Cowork</td></tr>
+            <tr><td class="py-3 px-3">Créer une proposition commerciale</td><td class="py-3 px-3 text-sol-navy font-mono text-xs">Cowork</td></tr>
         </tbody>
     </table>
     </div>
@@ -778,14 +778,14 @@ Dialogue → tu parles en français, il comprend
 <div class="max-w-3xl mx-auto px-4 sr">
     <h2 class="font-space font-bold text-3xl mb-6">Ce qu'il faut retenir de cette séance.</h2>
     <div class="space-y-3">
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Claude Code c'est pas un chatbot — c'est un agent qui agit sur ton ordinateur</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Tu l'installes en 5 minutes avec <span class="code-inline">npm install -g @anthropic-ai/claude-code</span></span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Tu lui parles en français, il comprend et il exécute</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Sois précis, donne du contexte, itère</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Le fichier CLAUDE.md c'est le briefing permanent du projet</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Les commandes clés : <span class="code-inline">/help</span> <span class="code-inline">/clear</span> <span class="code-inline">/cost</span> <span class="code-inline">/compact</span> <span class="code-inline">/init</span></span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">Il peut se tromper — vérifie toujours, découpe en petites étapes</span></div>
-        <div class="flex items-center gap-3"><span class="text-sol-green text-lg">✓</span><span class="text-sol-gray">C'est ton outil principal — tu l'utilises dans 13 séances sur 24</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Claude Code c'est pas un chatbot — c'est un agent qui agit sur ton ordinateur</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Tu l'installes en 5 minutes avec <span class="code-inline">npm install -g @anthropic-ai/claude-code</span></span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Tu lui parles en français, il comprend et il exécute</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Sois précis, donne du contexte, itère</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Le fichier CLAUDE.md c'est le briefing permanent du projet</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Les commandes clés : <span class="code-inline">/help</span> <span class="code-inline">/clear</span> <span class="code-inline">/cost</span> <span class="code-inline">/compact</span> <span class="code-inline">/init</span></span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">Il peut se tromper — vérifie toujours, découpe en petites étapes</span></div>
+        <div class="flex items-center gap-3"><span class="text-sol-accent text-lg">✓</span><span class="text-sol-gray">C'est ton outil principal — tu l'utilises dans 13 séances sur 24</span></div>
     </div>
 </div>
 </section>
@@ -898,7 +898,7 @@ Dialogue → tu parles en français, il comprend
 <footer class="py-8 border-t border-sol-lightgray">
 <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
     <div class="flex items-center gap-2">
-        <div class="w-6 h-6 bg-sol-accent flex items-center justify-center font-mono font-bold text-xs text-white rounded">D</div>
+        <div class="w-6 h-6 bg-sol-navy flex items-center justify-center font-mono font-bold text-xs text-white rounded">D</div>
         <span class="font-space font-bold text-sm">DENEM Academy</span>
     </div>
     <span class="text-xs text-sol-gray font-mono">Séance 01 / 24</span>
