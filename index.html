@@ -13,38 +13,144 @@ tailwind.config={theme:{extend:{fontFamily:{'space':['Space Grotesk','sans-serif
 *{margin:0;padding:0;box-sizing:border-box}
 ::selection{background:#4CC0C0;color:#1F0A32}
 body{background:#fff;color:#1F0A32;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* Gradients */
 .gradient-text{background:linear-gradient(135deg,#272B5C,#4CC0C0,#30D9DE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gs 6s ease infinite}
 .gradient-bg{background:linear-gradient(135deg,#272B5C,#4CC0C0,#30D9DE);background-size:200% 200%;animation:gs 8s ease infinite}
+
+/* Keyframes */
 @keyframes gs{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes floatSlow{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(3deg)}}
+@keyframes floatReverse{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(12px) rotate(-2deg)}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.4}100%{transform:scale(1.5);opacity:0}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes typewriter{from{width:0}to{width:100%}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+@keyframes bounceSubtle{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 5px rgba(76,192,192,.2)}50%{box-shadow:0 0 20px rgba(76,192,192,.4)}}
+@keyframes dash{to{stroke-dashoffset:0}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes wiggle{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+
+/* Float animations */
 .animate-float{animation:float 6s ease-in-out infinite}
-.sr{opacity:0;transform:translateY(16px);transition:all .7s cubic-bezier(.4,0,.2,1)}.sr.v{opacity:1;transform:translateY(0)}
-.s1{transition-delay:.1s}.s2{transition-delay:.2s}.s3{transition-delay:.3s}.s4{transition-delay:.4s}.s5{transition-delay:.5s}
-.ch{transition:all .3s cubic-bezier(.4,0,.2,1)}.ch:hover{transform:translateY(-4px);box-shadow:rgba(39,43,92,.15) 0px 13px 27px -5px,rgba(0,0,0,.06) 0px 8px 16px -8px}
-.tag{display:inline-block;padding:5px 14px;font-size:.7rem;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;border:1.5px solid;border-radius:4px}
-.tb{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;font-size:.72rem;font-weight:500;font-family:'JetBrains Mono',monospace;border:1.5px solid;border-radius:4px}
-.progress-bar{position:fixed;top:0;left:0;height:3px;z-index:9999;transition:width .1s}
-nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
-.code{background:#1F0A32;color:#e8edf2;border-left:4px solid #4CC0C0;padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.8;border-radius:6px}
-.code-inline{background:#f4f7fa;color:#272B5C;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:.82rem;border-radius:4px;border:1px solid #e8edf2}
-.cmd{background:#1F0A32;color:#30D9DE;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px}
+.animate-float-slow{animation:floatSlow 8s ease-in-out infinite}
+.animate-float-reverse{animation:floatReverse 7s ease-in-out infinite}
+.animate-bounce-subtle{animation:bounceSubtle 3s ease-in-out infinite}
+.animate-glow{animation:glow 3s ease-in-out infinite}
+.animate-wiggle{animation:wiggle 4s ease-in-out infinite}
+.animate-spin-slow{animation:rotate 20s linear infinite}
+
+/* Pulse ring effect */
+.pulse-ring{position:relative}.pulse-ring::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid #4CC0C0;animation:pulse-ring 2s cubic-bezier(.4,0,.6,1) infinite}
+
+/* Shimmer loading effect */
+.shimmer{background:linear-gradient(90deg,#f4f7fa 25%,#e8edf2 50%,#f4f7fa 75%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite}
+
+/* Typewriter */
+.typewriter{overflow:hidden;white-space:nowrap;border-right:2px solid #4CC0C0;animation:typewriter 2s steps(30) forwards,blink .8s step-end infinite}
+
+/* Cursor blink for terminal */
+.blink-cursor::after{content:'▋';animation:blink 1s step-end infinite;color:#4CC0C0}
+
+/* Scroll reveal with variants */
+.sr{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}.sr.v{opacity:1;transform:translateY(0)}
+.sr-left{opacity:0;transform:translateX(-30px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}.sr-left.v{opacity:1;transform:translateX(0)}
+.sr-right{opacity:0;transform:translateX(30px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}.sr-right.v{opacity:1;transform:translateX(0)}
+.sr-scale{opacity:0;transform:scale(.9);transition:all .8s cubic-bezier(.25,.46,.45,.94)}.sr-scale.v{opacity:1;transform:scale(1)}
+.s1{transition-delay:.1s}.s2{transition-delay:.2s}.s3{transition-delay:.3s}.s4{transition-delay:.4s}.s5{transition-delay:.5s}.s6{transition-delay:.6s}.s7{transition-delay:.7s}
+
+/* Card hover with multiple styles */
+.ch{transition:all .35s cubic-bezier(.25,.46,.45,.94)}.ch:hover{transform:translateY(-6px);box-shadow:rgba(39,43,92,.12) 0px 20px 40px -8px,rgba(76,192,192,.08) 0px 8px 20px -6px}
+.ch-scale{transition:all .3s ease}.ch-scale:hover{transform:scale(1.03);box-shadow:rgba(39,43,92,.1) 0px 15px 30px -5px}
+.ch-glow{transition:all .3s ease}.ch-glow:hover{box-shadow:0 0 0 3px rgba(76,192,192,.15),rgba(39,43,92,.1) 0px 10px 25px -5px}
+.ch-tilt{transition:all .3s ease;transform-style:preserve-3d}
+
+/* Magnetic button effect */
+.magnetic{transition:transform .2s ease}
+
+/* Underline animation on links */
+.link-anim{position:relative;text-decoration:none}.link-anim::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:#4CC0C0;transition:width .3s ease}.link-anim:hover::after{width:100%}
+
+/* Gradient border effect */
+.gradient-border{position:relative;background:#fff;border-radius:8px}.gradient-border::before{content:'';position:absolute;inset:-2px;border-radius:10px;background:linear-gradient(135deg,#272B5C,#4CC0C0,#30D9DE);z-index:-1;background-size:200% 200%;animation:gs 4s ease infinite}
+
+/* Glassmorphism card */
+.glass{background:rgba(255,255,255,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(76,192,192,.15)}
+
+/* Cursor glow */
+.cursor-glow{position:fixed;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(76,192,192,.06),transparent 70%);pointer-events:none;z-index:0;transition:transform .15s ease}
+
+/* Animated counter */
+.counter{font-variant-numeric:tabular-nums;transition:all .3s ease}
+
+/* Staggered list animation */
+.stagger-list>*{opacity:0;transform:translateY(10px);transition:all .5s ease}.stagger-list.v>*{opacity:1;transform:translateY(0)}
+.stagger-list>*:nth-child(1){transition-delay:.05s}.stagger-list>*:nth-child(2){transition-delay:.1s}.stagger-list>*:nth-child(3){transition-delay:.15s}.stagger-list>*:nth-child(4){transition-delay:.2s}.stagger-list>*:nth-child(5){transition-delay:.25s}.stagger-list>*:nth-child(6){transition-delay:.3s}.stagger-list>*:nth-child(7){transition-delay:.35s}.stagger-list>*:nth-child(8){transition-delay:.4s}
+
+/* Parallax layer */
+.parallax{transition:transform .1s linear}
+
+/* Smooth underline reveal */
+.reveal-line{position:relative;display:inline-block}.reveal-line::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:#4CC0C0;transform:scaleX(0);transform-origin:right;transition:transform .4s ease}.reveal-line.v::after{transform:scaleX(1);transform-origin:left}
+
+/* Dot pattern overlay */
+.dots-overlay{position:relative}.dots-overlay::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(76,192,192,.07) 1px,transparent 1px);background-size:16px 16px;pointer-events:none;border-radius:inherit}
+
+/* Tags */
+.tag{display:inline-block;padding:5px 14px;font-size:.7rem;font-weight:600;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;border:1.5px solid;border-radius:4px;transition:all .3s ease}.tag:hover{transform:translateY(-2px)}
+.tb{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;font-size:.72rem;font-weight:500;font-family:'JetBrains Mono',monospace;border:1.5px solid;border-radius:4px;transition:all .3s ease}.tb:hover{transform:translateY(-1px)}
+
+/* Progress bar */
+.progress-bar{position:fixed;top:0;left:0;height:3px;z-index:9999;transition:width .15s ease}
+
+/* Nav */
+nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:all .3s ease}
+nav.scrolled{box-shadow:rgba(39,43,92,.08) 0px 4px 12px}
+
+/* Code blocks */
+.code{background:#1F0A32;color:#e8edf2;border-left:4px solid #4CC0C0;padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.8;border-radius:6px;transition:all .3s ease}.code:hover{box-shadow:rgba(76,192,192,.1) 0px 8px 25px}
+.code-inline{background:#f4f7fa;color:#272B5C;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:.82rem;border-radius:4px;border:1px solid #e8edf2;transition:all .2s ease}.code-inline:hover{background:#edf1f6;border-color:#4CC0C0}
+.cmd{background:#1F0A32;color:#30D9DE;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border-radius:6px;display:flex;align-items:center;gap:8px;transition:all .3s ease;cursor:default}.cmd:hover{transform:translateX(4px);box-shadow:rgba(76,192,192,.1) 0px 4px 15px}
 .cmd::before{content:'$';color:#64748d}
-.card{background:#fff;border:1px solid #e8edf2;border-radius:8px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px,rgba(0,0,0,.03) 0px 1px 3px}
-.card-accent{background:#fff;border:1.5px solid #4CC0C0;border-radius:8px;box-shadow:rgba(76,192,192,.1) 0px 4px 12px}
-.card-green{background:#fff;border:1.5px solid #30D9DE;border-radius:8px;box-shadow:rgba(48,217,222,.1) 0px 4px 12px}
-.card-orange{background:#fff;border:1.5px solid #f97316;border-radius:8px;box-shadow:rgba(249,115,22,.06) 0px 4px 12px}
-.card-light{background:#fff;border:1px solid #e8edf2;border-radius:6px}
-.step{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;flex-shrink:0;border:1.5px solid;border-radius:50%}
-.sc{position:fixed;bottom:16px;right:16px;z-index:50;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#64748d;background:#fff;border:1px solid #e8edf2;padding:4px 10px;border-radius:4px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px}
-.terminal{background:#1F0A32;border-radius:8px;overflow:hidden}
+
+/* Cards */
+.card{background:#fff;border:1px solid #e8edf2;border-radius:8px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px,rgba(0,0,0,.03) 0px 1px 3px;transition:all .35s ease}
+.card-accent{background:#fff;border:1.5px solid #4CC0C0;border-radius:8px;box-shadow:rgba(76,192,192,.08) 0px 4px 12px;transition:all .35s ease}
+.card-green{background:#fff;border:1.5px solid #30D9DE;border-radius:8px;box-shadow:rgba(48,217,222,.08) 0px 4px 12px;transition:all .35s ease}
+.card-orange{background:#fff;border:1.5px solid #f97316;border-radius:8px;box-shadow:rgba(249,115,22,.06) 0px 4px 12px;transition:all .35s ease}
+.card-light{background:#fff;border:1px solid #e8edf2;border-radius:6px;transition:all .3s ease}.card-light:hover{border-color:#4CC0C0;box-shadow:rgba(76,192,192,.06) 0px 4px 12px}
+
+/* Step numbers */
+.step{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;flex-shrink:0;border:1.5px solid;border-radius:50%;transition:all .3s ease}.step:hover{transform:scale(1.1)}
+
+/* Section counter */
+.sc{position:fixed;bottom:16px;right:16px;z-index:50;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#64748d;background:#fff;border:1px solid #e8edf2;padding:4px 10px;border-radius:4px;box-shadow:rgba(39,43,92,.06) 0px 2px 5px;transition:all .3s ease}
+
+/* Terminal */
+.terminal{background:#1F0A32;border-radius:8px;overflow:hidden;transition:all .4s ease}.terminal:hover{box-shadow:rgba(31,10,50,.3) 0px 20px 40px -10px,rgba(76,192,192,.08) 0px 0px 0px 1px}
 .terminal-bar{background:#272B5C;padding:8px 16px;display:flex;align-items:center;gap:6px}
-.terminal-dot{width:10px;height:10px;border-radius:50%}
+.terminal-dot{width:10px;height:10px;border-radius:50%;transition:all .2s ease}
+.terminal:hover .terminal-dot:nth-child(1){transform:scale(1.2)}.terminal:hover .terminal-dot:nth-child(2){transform:scale(1.2);transition-delay:.05s}.terminal:hover .terminal-dot:nth-child(3){transform:scale(1.2);transition-delay:.1s}
 .terminal-body{padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.9;color:#e8edf2}
 .terminal-prompt{color:#30D9DE}
 .terminal-cmd{color:#fff}
 .terminal-output{color:#94a3b8}
 .terminal-accent{color:#4CC0C0}
-.emoji{filter:drop-shadow(1px 1px 0 rgba(39,43,92,.1))}
+
+/* Emoji */
+.emoji{filter:drop-shadow(1px 1px 0 rgba(39,43,92,.1));transition:transform .3s ease}.emoji:hover{transform:scale(1.2) rotate(-5deg)}
+
+/* Smooth scroll indicator */
+.scroll-hint{animation:bounceSubtle 2.5s ease-in-out infinite}
+
+/* Noise texture overlay */
+.noise{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;opacity:.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 </style>
 </head>
 <body>
@@ -65,18 +171,38 @@ nav{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
 </div>
 </nav>
 
+<!-- Noise overlay -->
+<div class="noise"></div>
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cg"></div>
+
 <!-- ===== S1: Hero ===== -->
-<section data-s="1" class="min-h-screen flex items-center justify-center relative pt-14">
-<div class="absolute top-24 right-16 w-14 h-14 border-2 border-sol-accent/10 rounded-lg rotate-12 animate-float hidden lg:block"></div>
-<div class="max-w-3xl mx-auto px-4 text-center">
-    <div class="sr"><span class="tag border-sol-accent text-sol-accent">Séance 1 sur 24</span></div>
+<section data-s="1" class="min-h-screen flex items-center justify-center relative pt-14 overflow-hidden">
+<!-- Floating shapes -->
+<div class="absolute top-20 right-16 w-16 h-16 border-2 border-sol-accent/15 rounded-lg rotate-12 animate-float hidden lg:block"></div>
+<div class="absolute top-40 left-12 w-10 h-10 border-2 border-sol-navy/10 rounded-full animate-float-slow hidden lg:block"></div>
+<div class="absolute bottom-32 right-24 w-8 h-8 bg-sol-cyan/10 rounded animate-float-reverse hidden lg:block"></div>
+<div class="absolute bottom-48 left-20 w-12 h-12 border-2 border-sol-accent/10 rounded-xl rotate-45 animate-float hidden lg:block" style="animation-delay:1s"></div>
+<div class="absolute top-1/3 right-1/4 w-3 h-3 bg-sol-accent/20 rounded-full animate-bounce-subtle hidden lg:block"></div>
+<div class="absolute bottom-1/4 left-1/3 w-2 h-2 bg-sol-navy/15 rounded-full animate-bounce-subtle hidden lg:block" style="animation-delay:.5s"></div>
+<!-- Dot pattern -->
+<div class="absolute inset-0 dots-overlay opacity-50"></div>
+
+<div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+    <div class="sr"><span class="tag border-sol-accent text-sol-accent pulse-ring">Séance 1 sur 24</span></div>
     <h1 class="sr s1 font-space font-bold text-5xl sm:text-6xl md:text-7xl leading-[.92] mt-6 mb-6">
         <span class="gradient-text">Claude Code.</span><br><span class="text-sol-gray text-3xl sm:text-4xl">Ton outil principal.</span>
     </h1>
     <p class="sr s2 text-lg text-sol-gray max-w-xl mx-auto leading-relaxed mb-8">C'est l'IA dans ton terminal. Tu lui parles, il construit. Pas besoin de savoir coder. Dans cette séance, tu apprends ce que c'est, comment l'installer, et comment t'en servir.</p>
-    <div class="sr s3 tb border-sol-accent text-sol-accent mx-auto">
+    <div class="sr s3 tb border-sol-accent text-sol-accent mx-auto animate-glow">
         <span class="w-1.5 h-1.5 bg-sol-accent rounded-full"></span>
         35-45 min de vidéo
+    </div>
+    <!-- Scroll hint -->
+    <div class="sr s4 mt-16 scroll-hint">
+        <div class="w-6 h-10 border-2 border-sol-navy/20 rounded-full mx-auto flex items-start justify-center p-1">
+            <div class="w-1 h-2.5 bg-sol-accent/40 rounded-full" style="animation:bounceSubtle 2s ease-in-out infinite"></div>
+        </div>
     </div>
 </div>
 </section>
@@ -907,14 +1033,138 @@ Dialogue → tu parles en français, il comprend
 
 <!-- JS -->
 <script>
-window.addEventListener('scroll',()=>{const s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('pb').style.width=(s/d)*100+'%'});
-const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.sr').forEach(e=>ro.observe(e));
+// ==========================================
+// Progress bar (smooth)
+// ==========================================
+window.addEventListener('scroll',()=>{
+    const s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;
+    document.getElementById('pb').style.width=(s/d)*100+'%';
+    // Nav shadow on scroll
+    document.querySelector('nav').classList.toggle('scrolled',s>50);
+});
+
+// ==========================================
+// Scroll reveal (multiple types)
+// ==========================================
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-scale,.stagger-list,.reveal-line').forEach(e=>ro.observe(e));
+
+// ==========================================
+// Section counter
+// ==========================================
 const allS=document.querySelectorAll('[data-s]'),sc=document.getElementById('sc');
-const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)sc.textContent=x.target.dataset.s+' / 50'})},{threshold:.3});
+const sco=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){sc.textContent=x.target.dataset.s+' / 50';sc.style.transform='scale(1.1)';setTimeout(()=>sc.style.transform='scale(1)',200)}})},{threshold:.3});
 allS.forEach(s=>sco.observe(s));
-document.querySelectorAll('.ch').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;c.style.transform=`perspective(800px) rotateX(${(y-r.height/2)/35}deg) rotateY(${(r.width/2-x)/35}deg) translateY(-4px)`});c.addEventListener('mouseleave',()=>{c.style.transform=''})});
-let kc=[];const ks=[38,38,40,40,37,39,37,39,66,65];document.addEventListener('keydown',e=>{kc.push(e.keyCode);if(kc.length>ks.length)kc.shift();if(JSON.stringify(kc)===JSON.stringify(ks)){document.body.style.transition='filter 1s';document.body.style.filter='hue-rotate(180deg)';setTimeout(()=>document.body.style.filter='none',3000)}});
+
+// ==========================================
+// Card 3D tilt
+// ==========================================
+document.querySelectorAll('.ch,.ch-tilt').forEach(c=>{
+    c.addEventListener('mousemove',e=>{
+        const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+        const rotX=(y-r.height/2)/30,rotY=(r.width/2-x)/30;
+        c.style.transform=`perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+    });
+    c.addEventListener('mouseleave',()=>{c.style.transform='';});
+});
+
+// ==========================================
+// Cursor glow (follows mouse smoothly)
+// ==========================================
+const cg=document.getElementById('cg');
+let mx=0,my=0,gx=0,gy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function ag(){gx+=(mx-gx)*.06;gy+=(my-gy)*.06;if(cg)cg.style.transform=`translate(${gx-150}px,${gy-150}px)`;requestAnimationFrame(ag)})();
+
+// ==========================================
+// Magnetic effect on tags/buttons
+// ==========================================
+document.querySelectorAll('.magnetic,.tag,.tb').forEach(el=>{
+    el.addEventListener('mousemove',e=>{
+        const r=el.getBoundingClientRect();
+        const x=(e.clientX-r.left-r.width/2)*.15;
+        const y=(e.clientY-r.top-r.height/2)*.15;
+        el.style.transform=`translate(${x}px,${y}px)`;
+    });
+    el.addEventListener('mouseleave',()=>{el.style.transform='';});
+});
+
+// ==========================================
+// Terminal typing animation on hover
+// ==========================================
+document.querySelectorAll('.terminal').forEach(t=>{
+    t.addEventListener('mouseenter',()=>{
+        t.querySelectorAll('.terminal-output').forEach((line,i)=>{
+            line.style.opacity='0';line.style.transform='translateX(-5px)';
+            setTimeout(()=>{line.style.transition='all .3s ease';line.style.opacity='1';line.style.transform='translateX(0)'},i*80);
+        });
+    });
+});
+
+// ==========================================
+// Cmd copy to clipboard on click
+// ==========================================
+document.querySelectorAll('.cmd').forEach(cmd=>{
+    cmd.style.cursor='pointer';
+    cmd.title='Clique pour copier';
+    cmd.addEventListener('click',()=>{
+        const text=cmd.textContent.replace('$','').trim();
+        navigator.clipboard.writeText(text);
+        const orig=cmd.style.borderColor;
+        cmd.style.borderColor='#4CC0C0';cmd.style.boxShadow='0 0 0 3px rgba(76,192,192,.2)';
+        setTimeout(()=>{cmd.style.borderColor=orig;cmd.style.boxShadow=''},800);
+    });
+});
+
+// ==========================================
+// Parallax on floating elements
+// ==========================================
+window.addEventListener('scroll',()=>{
+    const s=window.scrollY;
+    document.querySelectorAll('.animate-float,.animate-float-slow,.animate-float-reverse').forEach((el,i)=>{
+        const speed=.02+i*.01;
+        el.style.transform=`translateY(${Math.sin(s*speed)*15}px) rotate(${Math.sin(s*speed)*3}deg)`;
+    });
+});
+
+// ==========================================
+// Easter egg: Konami code
+// ==========================================
+let kc=[];const ks=[38,38,40,40,37,39,37,39,66,65];
+document.addEventListener('keydown',e=>{
+    kc.push(e.keyCode);if(kc.length>ks.length)kc.shift();
+    if(JSON.stringify(kc)===JSON.stringify(ks)){
+        document.body.style.transition='filter 1s';
+        document.body.style.filter='hue-rotate(180deg)';
+        setTimeout(()=>document.body.style.filter='none',3000);
+    }
+});
+
+// ==========================================
+// Easter egg: triple click on logo
+// ==========================================
+let lc=0;
+document.querySelector('nav .rounded')?.addEventListener('click',()=>{
+    lc++;
+    if(lc===3){
+        document.querySelector('nav .rounded').style.transition='all .5s';
+        document.querySelector('nav .rounded').style.transform='rotate(360deg) scale(1.3)';
+        document.querySelector('nav .rounded').style.background='#4CC0C0';
+        setTimeout(()=>{
+            document.querySelector('nav .rounded').style.transform='';
+            document.querySelector('nav .rounded').style.background='';
+        },1000);
+        lc=0;
+    }
+});
+
+// ==========================================
+// Smooth appear for emojis
+// ==========================================
+document.querySelectorAll('.emoji').forEach(em=>{
+    em.addEventListener('mouseenter',()=>{em.style.transform='scale(1.3) rotate(-8deg)';});
+    em.addEventListener('mouseleave',()=>{em.style.transform='';});
+});
 </script>
 </body>
 </html>
